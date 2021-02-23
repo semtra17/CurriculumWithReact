@@ -7,10 +7,10 @@ export default class Menu extends Component {
         return <div className="menu">
             <ul>
                 <li>
-                    <a href="#">¿Quién soy?</a>
+                    <a href="#WhoAmI">¿Quién soy?</a>
                 </li>
                 <li>
-                    <a href="#">Habilidades y Tecnologías</a>
+                    <a href="#SkillsSoftware">Habilidades y Tecnologías</a>
                 </li>
                 <li>
                     <a href="#">Estudios y Certificaciones</a>

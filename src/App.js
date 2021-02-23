@@ -1,17 +1,18 @@
 import './App.css';
-import tasks from './samples/task.json';
 import React, { Component } from 'react';
 
 // componentes
 
 import Top  from './components/Top';
+import Middle  from './components/Middle';
+
 
 
 class App extends Component {
     render() {
                 return <div className="container">
                     <Top/>
-                    
+                    <Middle/>
                 </div>
             }
 }

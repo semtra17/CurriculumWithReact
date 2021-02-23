@@ -15,12 +15,15 @@ export default class Top extends Component {
             <div className="title">
                     <p>MI NOMBRE ES</p>
                     <p>LUCIANO AIZAR ASSEFH</p>
+                    
                     <span></span>
                     <p>PROGRAMADOR - DESARROLLADOR WEB</p>
                 </div>
            </div>
-           <div className="myPicture">
-               <img src="../2020-12-01.png" alt=""></img>
+           <div className="containerPicture">
+            <div className="myPicture">
+                <img src="./2020-12-01.png" alt="Profile"></img>
+            </div>
            </div>
         </div>
     }
