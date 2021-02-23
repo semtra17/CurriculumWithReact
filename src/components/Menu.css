@@ -1,0 +1,23 @@
+.menu{
+    width: 100%;
+    top: 0;
+    
+    height: 100%;
+    padding: 15px;
+    
+    background-image: url("../Rectángulo 1.png");
+
+}
+.menu ul {
+    font-family: 'Roboto', sans-serif;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    
+}
+.menu ul li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}

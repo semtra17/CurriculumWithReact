@@ -1,0 +1,55 @@
+.top{
+    background-color: tomato;
+    height: 100%;
+    background-image: url("../coding.png");
+    min-height: 970px;
+    background-size: cover;
+    border-bottom: solid;
+    border-color: white;
+}
+.container-title{
+    width: 100%;
+    height: 970px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+   
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 0;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    
+    text-align: center;
+}
+.title span{
+    border: solid;
+    border-width: 0.1px;
+    height: 0.1px;
+}
+
+.title p:nth-child(1){
+    font-size: 40px;
+    font-weight: 300;
+}
+.title p:nth-child(2){
+    margin-top: 20px;
+    font-size: 70px;
+    font-weight: bold;
+}
+.title p:nth-child(4){
+    font-weight: 400;
+    font-size: 40px; 
+}
+
+.myPicture{
+    align-self: center;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+}
