@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Top.css';
+import '../styleFiles/Top.css';
 import Menu  from './Menu';
 
 

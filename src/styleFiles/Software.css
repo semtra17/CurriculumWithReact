@@ -1,0 +1,53 @@
+.Software{
+    width: 100%;
+    height: 10%;
+    padding: 30px;
+ position: relative;
+}
+.titleSoftware{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 2.1em;
+    justify-content: center;
+    border-bottom: solid;
+    border-width: 0.1px;
+    
+}
+.titleSoftware span{
+    display: flex;
+    justify-content: center;
+}
+
+.titleSoftware span img{
+    align-self: center;
+}
+
+.titleSoftware h2{
+    
+    margin-left: 40px;
+    
+ }
+.iconsSoftware{
+    margin-top: 4%;
+  
+} 
+
+.iconsSoftware ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.iconsSoftware ul li{
+    
+    display: flex;
+}
+.iconsSoftware ul li img{
+    align-self: center;
+    width: 90px;
+    height: 80px;
+}
+
+

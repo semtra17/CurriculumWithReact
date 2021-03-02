@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Menu.css';
+import '../styleFiles/Menu.css';
 
 
 export default class Menu extends Component {
@@ -13,7 +13,7 @@ export default class Menu extends Component {
                     <a href="#SkillsSoftware">Habilidades y Tecnologías</a>
                 </li>
                 <li>
-                    <a href="#">Estudios y Certificaciones</a>
+                    <a href="#Certifications">Estudios y Certificaciones</a>
                 </li>
                 <li>
                     <a href="#">Trabajos</a>

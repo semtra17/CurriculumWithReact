@@ -1,7 +1,7 @@
 import React,{Component} from  'react';
 
 
-import './SkillsSoftware.css'
+import '../styleFiles/SkillsSoftware.css'
 
 export default class SkillsSoftware extends Component {
     render(){
