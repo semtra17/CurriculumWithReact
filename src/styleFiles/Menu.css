@@ -1,23 +1,39 @@
-.menu{
+.header{
+    position: fixed;
     width: 100%;
-    top: 0;
-    
-    height: 100%;
-    padding: 15px;
-    
-    background-image: url("../Rectángulo 1.png");
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  
 }
-.menu ul {
-    font-family: 'Roboto', sans-serif;
+.menu.sticky{
+    background: white;
+    font-size: 1em;
+    transition: 0.6s;
+}
+.menu.sticky li a{
+    color: black;
+}
+.menu {
+    transition: 0.6s;
+    margin: 0;
+    top: 0;
+    z-index: 10;
+    font-family: 'Montserrat', sans-serif;
     justify-content: space-evenly;
     list-style: none;
     width: 100%;
+    padding: 30px 90px; 
     display: flex;
-    
+    font-size: 1.2em;
 }
-.menu ul li a{
-    color: white;
+.menu li{
+    position: relative;
+}
+
+.menu li a{
+    color: #e2fffa;
     font-weight: bold;
     text-decoration: none;
 }

@@ -20,7 +20,7 @@ export default class Contact extends Component{
                          <span>semtra17@gmail.com</span>
                          </a>
                 <a href="#">
-                        <img src="../linkedin.png" alt="whoIcon"></img>
+                        <img src="../linkedin (1).png" alt="whoIcon"></img>
                          <span>linkedin.com/in/luciano-aizar-assefh-80a09b1b4</span>
                          </a>
                 <a href="#">

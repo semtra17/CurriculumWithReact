@@ -21,7 +21,7 @@ export default class WhoAmI extends Component{
                         En este momento me encuentro trabajando en mi propia startup de desarrollo web y diseño gráfico freelance junto a un colega. <br/> 
                         </p>
                     </div>
-                    <div><img src="..//personalidad.png" alt="whoIcon"></img></div>
+                    <div><img src="../personalidad.png" alt="whoIcon"></img></div>
                 </div>
                 
             </div>
