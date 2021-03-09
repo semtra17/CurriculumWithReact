@@ -154,6 +154,8 @@
     justify-content: center;
 }
 .myPicture{
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.288),
+    inset 0 0 1px 1px rgba(0, 0, 0, 0.288);
     border-radius: 50%;
     align-self: center;
     display: flex;
@@ -175,9 +177,9 @@
 
 
 .myPicture.animation{
-    opacity: 1;
-    transition: 0.8s;
-    animation: animatedBorderPicture 2s ease;
+    opacity: 1;  
+    animation: animatedBorderPicture 0.3s backwards;
+    animation-delay: 2s;
 }
 @keyframes animatedBorderPicture{
     0%{
@@ -206,17 +208,21 @@
     border-radius: 20%;
 }
 .linesPicture.animation span:nth-child(1){
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.288),
+    inset 0 0 3px 1px rgba(0, 0, 0, 0.288);
     left: 0;
-    width: 50%;
+    width: 46%;
     border: solid;
    
-    animation: animatedLinePicture1 2s ease;
+    animation: animatedLinePicture1 2.4s ease;
 }
 .linesPicture.animation span:nth-child(2){
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.288),
+    inset 0 0 3px 1px rgba(0, 0, 0, 0.288);
     right: 0;
-    width: 50%;
+    width: 46%;
     border: solid;
-    animation: animatedLinePicture2 2s ease;
+    animation: animatedLinePicture2 2.4s ease;
 }
 @keyframes animatedLinePicture1{
     0%{

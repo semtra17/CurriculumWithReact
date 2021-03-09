@@ -16,11 +16,13 @@ class App extends Component {
         title:"title animation",
         linesPicture:"linesPicture",
         myPicture:"myPicture",
-        whoAmIText:"WhoAmI"
+        whoAmIText:"WhoAmI",
+        SkillsSoftware:"SkillsSoftware",
+        software:"Software",
     }
     
     onWheelFunctions = e =>{
-        
+        console.log(window.scrollY)
         if(window.scrollY > 0)
             this.setState({sticky:"menu sticky"});
         else
@@ -35,16 +37,27 @@ class App extends Component {
             this.setState({linesPicture:"linesPicture"});
             this.setState({myPicture:"myPicture"});
         }
-        // document.documentElement.scrollHeight
-        if(window.scrollY > window.scrollY * 0.065){
+
+        if(window.scrollY > document.documentElement.scrollHeight * 0.045){
             this.setState({whoAmIText:"WhoAmI animation"});
+        }else{
+            this.setState({whoAmIText:"WhoAmI"});
+        }
+        if(window.scrollY > document.documentElement.scrollHeight * 0.16){
+            this.setState({SkillsSoftware:"SkillsSoftware animation"});
+        }else{
+            this.setState({SkillsSoftware:"SkillsSoftware"});
+        }
+        if(window.scrollY > document.documentElement.scrollHeight * 0.30){
+            this.setState({software:"Software animation"});
+        }else{
+            this.setState({software:"Software"});
         }
 
         
     }
 
     onloadFunction = () => {
-        
         if(window.scrollY <= 0){
             this.setState({sticky:"menu"});
             this.setState({linesPicture:"linesPicture"});
@@ -57,20 +70,32 @@ class App extends Component {
             this.setState({sticky:"menu sticky"});
         }
         
-        if(window.scrollY > window.scrollY * 0.065){
+        if(window.scrollY > document.documentElement.scrollHeight * 0.045){
             this.setState({whoAmIText:"WhoAmI animation"});
         }
         else{
             this.setState({whoAmIText:"WhoAmI"});
+        }
+        if(window.scrollY > document.documentElement.scrollHeight * 0.16){
+            this.setState({SkillsSoftware:"SkillsSoftware animation"});
+        }else{
+            this.setState({SkillsSoftware:"SkillsSoftware"});
+        }
+        
+        if(window.scrollY > document.documentElement.scrollHeight * 0.30){
+            this.setState({software:"Software animation"});
+        }else{
+            this.setState({software:"Software"});
         }
 
     }
 
     
     render() {
+        
                 return <div className="container" onWheel={this.onWheelFunctions} onLoad={this.onloadFunction}>
-                    <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture} />
-                    <Middle whoAmIText={this.state.whoAmIText} />
+                    <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
+                    <Middle whoAmIText={this.state.whoAmIText} SkillsSoftware={this.state.SkillsSoftware} software={this.state.software} />
                     <Bottom/>
                 </div>
             }

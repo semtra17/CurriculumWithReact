@@ -5,12 +5,12 @@ import '../styleFiles/SkillsSoftware.css'
 
 export default class SkillsSoftware extends Component {
     render(){
-        return <section className="SkillsSoftware" id="SkillsSoftware">
-                    <div>
+        return <section className={this.props.SkillsSoftware} id="SkillsSoftware">
+                    
                         <div className="titleSkillsSoftware">
                             <h2>Habilidades y Tecnologías</h2>
                         </div>
-
+                        <span></span>
                         <div className="infoSkillsSoftware">
                             <div><img alt="skills" src="../habilidades.png" ></img></div>
                             <div >
@@ -27,7 +27,7 @@ export default class SkillsSoftware extends Component {
                             
                         </div>
                     
-                    </div>
+                    
                </section>
          
         

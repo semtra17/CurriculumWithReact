@@ -5,12 +5,12 @@ import '../styleFiles/Software.css'
 
 export default class Software extends Component {
     render(){
-        return <section className="Software" id="Software">
+        return <section className={this.props.software} id="Software">
                     <div>
                         <div className="titleSoftware">
-                            <span><img src="../web-browser.png" alt="codeIcon"></img></span><h2>Tecnologías, Lenguajes y Librerías</h2>
+                            <h2>Tecnologías, Lenguajes y Librerías</h2>
                         </div>
-
+                        <span></span>
                         <div className="iconsSoftware">
                             <ul>
                                 <li>
