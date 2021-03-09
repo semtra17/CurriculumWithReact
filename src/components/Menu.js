@@ -16,19 +16,19 @@ export default class Menu extends Component {
         return <div className="header">
             <ul className={this.props.sticky}>
         <li>
-            <a href="#WhoAmI">¿Quién soy?</a>
+            <a href="/#WhoAmI">¿Quién soy?</a>
         </li>
         <li>
-            <a href="#SkillsSoftware">Habilidades y Tecnologías</a>
+            <a href="/#SkillsSoftware">Habilidades y Tecnologías</a>
         </li>
         <li>
-            <a href="#Certifications">Estudios y Certificaciones</a>
+            <a href="/#Certifications">Estudios y Certificaciones</a>
         </li>
         <li>
-            <a href="#">Trabajos</a>
+            <a href="/#">Trabajos</a>
         </li>
         <li>
-            <a href="#">Contacto</a>
+            <a href="/#">Contacto</a>
         </li>
     </ul>
         </div>

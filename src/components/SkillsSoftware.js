@@ -12,7 +12,7 @@ export default class SkillsSoftware extends Component {
                         </div>
 
                         <div className="infoSkillsSoftware">
-                            <div><img src="../habilidades.png" alt="whoIcon"></img></div>
+                            <div><img alt="skills" src="../habilidades.png" ></img></div>
                             <div >
                                 <p>
                                 Mi herramienta y lenguaje principal de desarrollo es JavaScript, me gusta usarlo tanto del lado del cliente como del servidor.<br/> 

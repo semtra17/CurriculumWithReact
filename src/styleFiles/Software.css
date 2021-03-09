@@ -29,7 +29,7 @@
     
  }
 .iconsSoftware{
-    margin-top: 4%;
+    margin-top: 8%;
   
 } 
 
@@ -45,7 +45,7 @@
 
 }
 .iconsSoftware ul li{
-    animation: animatedIcons 5s linear infinite ;
+    /* animation: animatedIcons 5s linear infinite ; */
     display: flex;
 }
 .iconsSoftware ul li img{

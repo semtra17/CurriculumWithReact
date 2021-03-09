@@ -22,7 +22,8 @@ import Contact from './Contact';
 export default class Middle extends Component {
     render(){
         return <div className="middle">
-           <WhoAmI/>
+            
+           <WhoAmI whoAmIText={this.props.whoAmIText} />
            <SkillsSoftware/>
            <Software/>
            <Certifications/>

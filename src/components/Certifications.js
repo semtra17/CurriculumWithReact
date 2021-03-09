@@ -64,7 +64,7 @@ export default class Certifications extends Component{
                         </div>
                       
                     </div>
-                    <div className="imgCertifications"><img src="../medalla.png" alt="medal"></img></div>
+                    <div className="imgCertifications"><img  src="../medalla.png" alt="medal"></img></div>
                 </div>
                 
             </div>

@@ -14,44 +14,44 @@ export default class Software extends Component {
                         <div className="iconsSoftware">
                             <ul>
                                 <li>
-                                    <img  src="../github.png" alt="iconSoftware"></img>
+                                    <img alt="github"  src="../github.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../java.png" alt="iconSoftware"></img>
+                                    <img alt="java"  src="../java.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../js.png" alt="iconSoftware"></img>
+                                    <img  alt="js" src="../js.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../html.png" alt="iconSoftware"></img>
+                                    <img alt="html"  src="../html.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../css-3.png" alt="iconSoftware"></img>
+                                    <img alt="css3"  src="../css-3.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../njs.png" alt="iconSoftware"></img>
+                                    <img alt="njs"  src="../njs.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../react.png" alt="iconSoftware"></img>
+                                    <img alt="react"  src="../react.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../wbp.png" alt="iconSoftware"></img>
+                                    <img alt="wbp"  src="../wbp.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../mysql.png" alt="iconSoftware"></img>
+                                    <img alt="mysql"  src="../mysql.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../descarga.png" alt="iconSoftware"></img>
+                                    <img alt="mongodb"  src="../descarga.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../postman.png" alt="iconSoftware"></img>
+                                    <img alt="postman"  src="../postman.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../ps.png" alt="iconSoftware"></img>
+                                    <img alt="ps"  src="../ps.png" ></img>
                                 </li>
                                 <li>
-                                    <img  src="../xd.png" alt="iconSoftware"></img>
-                                </li>
+                                    <img alt="sd"  src="../xd.png" ></img>
+                                 </li>
                             </ul>
                         </div>
                     

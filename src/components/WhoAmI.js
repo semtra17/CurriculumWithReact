@@ -2,9 +2,9 @@ import React,{Component} from 'react';
 import "../styleFiles/WhoAmI.css"
 
 export default class WhoAmI extends Component{
-
+    
     render(){
-        return <section className="WhoAmI" id="WhoAmI">
+        return <section className={this.props.whoAmIText} id="WhoAmI">
             <div>
                 <div className="titleWhoAmI">
                     <h2>¿Quién soy?</h2>
@@ -21,7 +21,7 @@ export default class WhoAmI extends Component{
                         En este momento me encuentro trabajando en mi propia startup de desarrollo web y diseño gráfico freelance junto a un colega. <br/> 
                         </p>
                     </div>
-                    <div><img src="../personalidad.png" alt="whoIcon"></img></div>
+                    <div><img alt="personality" src="../personalidad.png" ></img></div>
                 </div>
                 
             </div>
