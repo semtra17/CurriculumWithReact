@@ -69,6 +69,7 @@
 }
 .infoContact .box
 {
+    opacity: 0;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.993);
     border-radius: 45px;
     position: relative;
@@ -76,6 +77,9 @@
     height: 350px;
     overflow: hidden;
     transition: 0.8s;
+}
+.Contact.animation .infoContact .box{
+    opacity: 1;
 }
 .Contact.animation .infoContact .box:nth-child(1){
     animation: animatedBoxes 1s backwards;
