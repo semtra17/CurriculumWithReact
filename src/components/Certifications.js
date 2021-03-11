@@ -18,7 +18,7 @@ export default class Certifications extends Component{
                                 <ul>
                                     <li>
                                         <div className="subtitle"><p > Universidad <br/> Nacional de Lanús</p></div>
-                                        <div className="subInfo"><p>Actualmente estudiante de la misma de 2do/3er año de la carrera Licenciatura en Sistemas.</p></div>
+                                        <div className="subInfo"><p>Actualmente estudiante de 3er año de la carrera Licenciatura en Sistemas en la misma </p></div>
                                     </li>
                                    
                                     
