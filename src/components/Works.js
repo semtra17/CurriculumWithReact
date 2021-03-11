@@ -4,12 +4,12 @@ import "../styleFiles/Works.css"
 export default class Works extends Component{
 
     render(){
-        return <section className="Works" id="Works">
-            <div>
+        return <section className={this.props.Works} id="Works">
+           
                 <div className="titleWorks">
                     <h2>Trabajos</h2>
                 </div>
-
+                <span className="underLine"></span>
                 <div className="infoWorks">
                         <h3>Repositorio de mis trabajos</h3>
                     <a href="/#">
@@ -22,7 +22,7 @@ export default class Works extends Component{
                     </a>
                 </div>
                 
-            </div>
+           
 
         </section>
 

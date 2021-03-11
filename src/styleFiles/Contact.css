@@ -12,13 +12,48 @@
     text-shadow: 2px 0 5px rgba(0, 0, 0, 0.432),
     -1px -1px 0 rgba(99, 99, 99, 0.562);
     font-size: 2.1em;
-    border-bottom: solid;
-    border-width: 0.1px;
     
 }
 .titleContact h2{
    margin-left: 40px;
-    
+   opacity: 0;
+}
+
+
+
+.Contact.animation h2{
+    transition: 2000ms;
+    opacity: 1;
+}
+
+
+
+.Contact span{
+    display: flex;
+    align-self: center;
+    justify-content: right;
+    position: relative;
+    width: 99%;
+    border-width: 0.1px;
+    color: white;
+    border-bottom: solid;
+    border-radius: 55px;
+    opacity: 0;
+}
+ .Contact.animation span{
+    opacity: 1;
+    animation: animatedUnderLineSubtitleContact  2.5s ease  ;
+}
+
+@keyframes animatedUnderLineSubtitleContact{
+    0%{
+        opacity: 0;
+        width: 0%;
+    }
+    100%{
+        opacity: 1;
+        width: 99%;
+    }
 }
 
 
@@ -34,14 +69,46 @@
 }
 .infoContact .box
 {
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.692);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.993);
     border-radius: 45px;
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 275px;
+    height: 350px;
     overflow: hidden;
     transition: 0.8s;
 }
+.Contact.animation .infoContact .box:nth-child(1){
+    animation: animatedBoxes 1s backwards;
+    animation-delay: 0.5s;
+}
+.Contact.animation .infoContact .box:nth-child(2){
+    animation: animatedBoxes 1s backwards;
+    animation-delay: 0.75s;
+    
+}
+.Contact.animation .infoContact .box:nth-child(3){
+    animation: animatedBoxes 1s backwards;
+    animation-delay: 1s;
+    
+}
+.Contact.animation .infoContact .box:nth-child(4){
+    animation: animatedBoxes 1s backwards;
+    animation-delay: 1.25s;
+
+}
+@keyframes animatedBoxes{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+
+}
+
+
+
 .infoContact .box:hover
 {   
     transition: 0.8s;
@@ -151,30 +218,37 @@
 
 .infoContact .box:nth-child(1) .imgBx
 {
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(237,255,238,1) 74%, rgba(235,255,236,1) 100%);
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.788) 0%, rgb(99, 98, 98) 1%, rgb(0, 0, 0) 100%);
 
 }
 
+.infoContact .box:nth-child(2) .imgBx
+{
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.788) 0%, rgb(99, 98, 98) 1%, rgb(0, 0, 0) 100%);
+
+} 
  .infoContact .box:nth-child(3) .imgBx
 {
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(199,217,255,1) 74%, rgba(153,185,255,1) 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(99, 98, 98) 1%, rgb(0, 0, 0) 100%);
 
+}
+.infoContact .box:nth-child(3) .imgBx::before{
+    content: "";
+    height: 20%;
+    position: absolute;
+    width: 20%;
+    background-color: white;
 }
 
 .infoContact .box:nth-child(4) .imgBx
 {
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(221,241,255,1) 74%, rgba(170,220,255,1) 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.788) 0%, rgb(99, 98, 98) 1%, rgb(0, 0, 0) 100%);
 
 }
-.infoContact .box:nth-child(2) .imgBx
-{
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,221,221,1) 74%, rgba(255,170,170,1) 100%);
-
-} 
 .infoContact .box:nth-child(1) .layer.layer1
 {
     background: #8af8af;

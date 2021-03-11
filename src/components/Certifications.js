@@ -4,12 +4,12 @@ import "../styleFiles/Certifications.css"
 export default class Certifications extends Component{
 
     render(){
-        return <section className="Certifications" id="Certifications">
-            <div>
+        return <section className={this.props.Certifications} id="Certifications">
+           
                 <div className="titleCertifications">
                     <h2>Estudios y Certificaciones</h2>
                 </div>
-
+                <span></span>
                 <div className="infoCertifications">
                     <div className="infoCertificationsBody" >
                         <div className="academyFormation">
@@ -67,7 +67,7 @@ export default class Certifications extends Component{
                     <div className="imgCertifications"><img  src="../medalla.png" alt="medal"></img></div>
                 </div>
                 
-            </div>
+            
 
         </section>
 

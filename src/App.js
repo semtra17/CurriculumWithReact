@@ -19,6 +19,9 @@ class App extends Component {
         whoAmIText:"WhoAmI",
         SkillsSoftware:"SkillsSoftware",
         software:"Software",
+        Certifications:"Certifications",
+        Works:"Works",
+        Contact:"Contact",
     }
     
     onWheelFunctions = e =>{
@@ -54,6 +57,22 @@ class App extends Component {
             this.setState({software:"Software"});
         }
 
+        if(window.scrollY > document.documentElement.scrollHeight * 0.40){
+            this.setState({Certifications:"Certifications animation"});
+        }else{
+            this.setState({Certifications:"Certifications"});
+        }
+        if(window.scrollY > document.documentElement.scrollHeight * 0.55){
+            this.setState({Works:"Works animation"});
+        }else{
+            this.setState({Works:"Works"});
+        }
+        if(window.scrollY > document.documentElement.scrollHeight * 0.75){
+            this.setState({Contact:"Contact animation"});
+        }else{
+            this.setState({Contact:"Contact"});
+        }
+
         
     }
 
@@ -87,7 +106,22 @@ class App extends Component {
         }else{
             this.setState({software:"Software"});
         }
+        if(window.scrollY > document.documentElement.scrollHeight * 0.40){
+            this.setState({Certifications:"Certifications animation"});
+        }else{
+            this.setState({Certifications:"Certifications"});
+        }
+        if(window.scrollY > document.documentElement.scrollHeight * 0.55){
+            this.setState({Works:"Works animation"});
+        }else{
+            this.setState({Works:"Works"});
+        }
 
+        if(window.scrollY > document.documentElement.scrollHeight * 0.75){
+            this.setState({Contact:"Contact animation"});
+        }else{
+            this.setState({Contact:"Contact"});
+        }
     }
 
     
@@ -95,7 +129,7 @@ class App extends Component {
         
                 return <div className="container" onWheel={this.onWheelFunctions} onLoad={this.onloadFunction}>
                     <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
-                    <Middle whoAmIText={this.state.whoAmIText} SkillsSoftware={this.state.SkillsSoftware} software={this.state.software} />
+                    <Middle Contact={this.state.Contact} whoAmIText={this.state.whoAmIText} SkillsSoftware={this.state.SkillsSoftware} software={this.state.software} Certifications={this.state.Certifications} Works={this.state.Works}/>
                     <Bottom/>
                 </div>
             }

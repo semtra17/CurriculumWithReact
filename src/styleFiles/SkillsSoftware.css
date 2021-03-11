@@ -25,6 +25,7 @@
  .SkillsSoftware span{
     display: flex;
     align-self: center;
+    justify-content: right;
     position: relative;
     width: 99%;
     border-width: 0.1px;
@@ -35,7 +36,7 @@
 }
  .SkillsSoftware.animation span{
     opacity: 1;
-    animation: animatedUnderLineSubtitle 2s ;
+    animation: animatedUnderLineSubtitle  2s   ;
 }
 
 @keyframes animatedUnderLineSubtitle{
