@@ -24,9 +24,15 @@ class App extends Component {
         Contact:"Contact",
     }
 
-    keyEscape = (e)=>{
-       let certificate = document.getElementById("Certificate");
-        certificate.classList.toggle("active");
+    keyEscape = ()=>{
+        let certificate = document.getElementById("certificado");
+        document.addEventListener("keyup", (e =>{
+            if(e.key === "Escape"){
+
+                certificate.className = "Certificate";
+            }
+
+        }))
     }
     
     onWheelFunctions = e =>{
@@ -139,7 +145,10 @@ class App extends Component {
     
     render() {
         
-                return <div className="container" onClickCapture={this.outClick} onWheel={this.onWheelFunctions} onLoad={this.onloadFunction} onKeyDown={this.keyEscape}>
+                return <div className="container" 
+                onClickCapture={this.outClick} 
+                onWheel={this.onWheelFunctions} 
+                onLoad={this.onloadFunction, this.keyEscape} >
                     <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
                     <Middle 
                      Contact={this.state.Contact} 
