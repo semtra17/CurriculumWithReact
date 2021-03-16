@@ -27,7 +27,10 @@ export default class Middle extends Component {
            <WhoAmI whoAmIText={this.props.whoAmIText} />
            <SkillsSoftware SkillsSoftware={this.props.SkillsSoftware} />
            <Software software={this.props.software} /> 
-           <Certifications Certifications={this.props.Certifications}/>
+           <Certifications 
+           image={this.props.image}
+           certificate={this.props.certificate}
+           Certifications={this.props.Certifications}/>
            <Works Works={this.props.Works}/>
            <Contact Contact={this.props.Contact}/>
         </div>

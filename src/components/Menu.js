@@ -25,10 +25,10 @@ export default class Menu extends Component {
             <a href="/#Certifications">Estudios y Certificaciones</a>
         </li>
         <li>
-            <a href="/#">Trabajos</a>
+            <a href="/#Contact">Contacto</a>
         </li>
         <li>
-            <a href="/#">Contacto</a>
+            <a href="/#">Trabajos</a>
         </li>
     </ul>
         </div>

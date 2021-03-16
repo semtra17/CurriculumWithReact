@@ -23,9 +23,13 @@ class App extends Component {
         Works:"Works",
         Contact:"Contact",
     }
+
+    keyEscape = (e)=>{
+       let certificate = document.getElementById("Certificate");
+        certificate.classList.toggle("active");
+    }
     
     onWheelFunctions = e =>{
-        console.log(window.scrollY)
         if(window.scrollY > 0)
             this.setState({sticky:"menu sticky"});
         else
@@ -74,6 +78,14 @@ class App extends Component {
         }
 
         
+    }
+
+    outClick = (e) =>{
+       
+        let certificado = document.getElementById("certificado");
+        if(e.target.className !=  "Certificate active" && certificado.className === "Certificate active"){
+            certificado.className = "Certificate";
+        }
     }
 
     onloadFunction = () => {
@@ -127,9 +139,15 @@ class App extends Component {
     
     render() {
         
-                return <div className="container" onWheel={this.onWheelFunctions} onLoad={this.onloadFunction}>
+                return <div className="container" onClickCapture={this.outClick} onWheel={this.onWheelFunctions} onLoad={this.onloadFunction} onKeyDown={this.keyEscape}>
                     <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
-                    <Middle Contact={this.state.Contact} whoAmIText={this.state.whoAmIText} SkillsSoftware={this.state.SkillsSoftware} software={this.state.software} Certifications={this.state.Certifications} Works={this.state.Works}/>
+                    <Middle 
+                     Contact={this.state.Contact} 
+                     whoAmIText={this.state.whoAmIText} 
+                     SkillsSoftware={this.state.SkillsSoftware} 
+                     software={this.state.software} 
+                     Certifications={this.state.Certifications} 
+                     Works={this.state.Works}/>
                     <Bottom/>
                 </div>
             }

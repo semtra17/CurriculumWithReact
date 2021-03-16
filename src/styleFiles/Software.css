@@ -74,6 +74,15 @@
 .iconsSoftware ul li{
     /* animation: animatedIcons 5s linear infinite ; */
     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.iconsSoftware ul li:hover {
+    transform: rotate(360deg);
+    transition: 1s;
 }
 .iconsSoftware ul li img{
     align-self: center;
