@@ -10,28 +10,33 @@ export default class Menu extends Component {
     
 
 
-
+    toggle(){
+        var header = document.getElementById('header');
+        header.classList.toggle('active')
+      }
     
     render(){
-        return <div className="header">
+        return <header className="header" id="header">
+            
             <ul className={this.props.sticky}>
         <li>
-            <a href="/#WhoAmI">¿Quién soy?</a>
+            <a onClick={this.toggle} href="/#WhoAmI">¿Quién soy?</a>
         </li>
         <li>
-            <a href="/#SkillsSoftware">Habilidades y Tecnologías</a>
+            <a onClick={this.toggle} href="/#SkillsSoftware">Habilidades y Tecnologías</a>
         </li>
         <li>
-            <a href="/#Certifications">Estudios y Certificaciones</a>
+            <a onClick={this.toggle} href="/#Certifications">Estudios y Certificaciones</a>
         </li>
         <li>
-            <a href="/#Contact">Contacto</a>
+            <a onClick={this.toggle} href="/#Contact">Contacto</a>
         </li>
         <li>
-            <a href="/#">Trabajos</a>
+            <a onClick={this.toggle} href="/#">Trabajos</a>
         </li>
     </ul>
-        </div>
+    <div className="toggle" onClick={this.toggle}></div>
+        </header>
         
     
     }

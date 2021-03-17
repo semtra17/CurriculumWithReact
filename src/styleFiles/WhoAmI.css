@@ -2,7 +2,8 @@
     width: 100%;
     height: 15%;
     padding: 30px;
-    padding-top: 50px;
+    
+    position: relative;
 }
 .WhoAmI span{
     display: flex;
@@ -40,6 +41,7 @@
 }
 
 .titleWhoAmI{
+    margin-top: 100px;
     transition:2000ms ;
     opacity: 0;
     font-size: 2.1em;
@@ -56,7 +58,8 @@
     justify-content: space-evenly;
 }
 .infoWhoAmI div:nth-child(1){
-    margin-left: -200px;
+    position: absolute;
+    left: 100px;
     width: 50%;
 }
 .infoWhoAmI div:nth-child(1) p{
@@ -66,6 +69,8 @@
     font-size: 1.6em;
 }
 .infoWhoAmI div:nth-child(2) img{
+    position: absolute;
+    right: 160px;
     transition:2000ms ;
     opacity: 0;
     margin-top: 110px;
@@ -103,4 +108,62 @@
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+
+
+@media (max-width: 992px){
+
+    .titleWhoAmI{
+        
+        transition:2000ms ;
+        opacity: 0;
+        font-size: 1.8em;
+    }
+ 
+
+    .infoWhoAmI div:nth-child(1){
+        margin: 0;
+        width: 60%;
+    }
+    .infoWhoAmI div:nth-child(1) p{
+        transition:2000ms ;
+        opacity: 0;
+        line-height: 1.5em;
+        font-size: 1.4em;
+    }
+    .infoWhoAmI div:nth-child(2) img{
+        margin-top: 160px;
+        right: 15px;
+        width: 180px;
+        height: 190px;
+    }
+    
+}
+
+@media (max-width: 705px){
+ 
+ 
+    .titleWhoAmI{
+        
+        transition:2000ms ;
+        opacity: 0;
+        font-size: 1.8em;
+    }
+ 
+
+    .infoWhoAmI div:nth-child(1){
+        margin: 0;
+        width: 70%;
+    }
+
+
+    .infoWhoAmI div:nth-child(2) img{
+        top: -50px;
+        margin-top: 160px;
+        right: 40px;
+        width: 100px;
+        height: 100px;
+    }
+    
 }

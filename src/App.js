@@ -25,6 +25,7 @@ class App extends Component {
     }
 
     keyEscape = ()=>{
+      
         let certificate = document.getElementById("certificado");
         document.addEventListener("keyup", (e =>{
             if(e.key === "Escape"){
@@ -148,7 +149,8 @@ class App extends Component {
                 return <div className="container" 
                 onClickCapture={this.outClick} 
                 onWheel={this.onWheelFunctions} 
-                onLoad={this.onloadFunction, this.keyEscape} >
+                onLoad={this.onloadFunction} 
+                >
                     <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
                     <Middle 
                      Contact={this.state.Contact} 

@@ -18,11 +18,11 @@ export default class Top extends Component {
            <div className="container-title">
             <div className="title" >
                     <span><p>MI NOMBRE ES</p></span>
-                    <span><p>LUCIANO AIZAR ASSEFH</p></span>
-                    
-                    
+                    <span><p>LUCIANO AIZAR <span className="lastName1">ASSEFH</span></p>
+                        <p className="lastName2">ASSEFH</p>
+                    </span>                 
                     <span></span>
-                    <span><p>PROGRAMADOR - DESARROLLADOR WEB</p></span>
+                    <span><p>PROGRAMADOR</p> - <p>DESARROLLADOR WEB</p></span>
                     
                 </div>
            </div>
