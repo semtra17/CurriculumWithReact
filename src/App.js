@@ -150,6 +150,7 @@ class App extends Component {
                 onClickCapture={this.outClick} 
                 onWheel={this.onWheelFunctions} 
                 onLoad={this.onloadFunction} 
+                onTouchMove={this.onWheelFunctions}
                 >
                     <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
                     <Middle 

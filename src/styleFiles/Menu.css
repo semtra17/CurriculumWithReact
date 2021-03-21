@@ -8,6 +8,7 @@
   
 }
 .menu.sticky{
+     width: 100%;
     background: white;
     font-size: 1em;
     transition: 0.6s;
