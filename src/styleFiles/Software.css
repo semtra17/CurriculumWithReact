@@ -72,7 +72,6 @@
 
 }
 .iconsSoftware ul li{
-    /* animation: animatedIcons 5s linear infinite ; */
     display: flex;
     justify-content: center;
     align-content: center;
@@ -178,4 +177,82 @@
   
 }
 
+@media (max-width: 1400px){
 
+    .Software{
+        margin-top: 200px;
+    }
+}
+
+
+
+@media (max-width: 992px){
+    .Software{
+        margin-top: 100px;
+    }
+    .titleSoftware{
+        font-size: 1.8em;    
+    }
+    .iconsSoftware ul{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+      
+    
+    }
+
+    .iconsSoftware ul li:nth-child(13){
+        grid-row: 4/4;
+        grid-column: 2/4;
+    }
+    .Software{ 
+        height: 10%; 
+    }
+}
+
+@media (max-width: 705px){
+    .Software{
+        margin-top: 50px;
+    }
+    
+    
+}
+@media (max-width:505px){
+   
+    .Software{
+        margin-top: 100px;
+      
+    }
+    .titleSoftware{
+        width: 120%;
+        margin-left: -45px;
+       
+        font-size: 1.4em;    
+    }
+
+    .iconsSoftware ul li img{
+        align-self: center;
+        width: 50px;
+        height: 50px;
+    }
+    .iconsSoftware ul li:nth-child(7) img{
+        width: 65px;
+    }
+    .iconsSoftware ul li:nth-child(8) img{
+        width: 65px;
+    }
+  
+    .iconsSoftware ul li:nth-child(13) img{
+        height: 47px;
+        width: 55px;
+    }
+   
+}
+@media (max-width:355px){
+    .Software{
+        margin-top: 300px;
+      
+    }
+}

@@ -3,11 +3,11 @@
     width: 100%;
     height: 15%;
     padding: 30px;
-   
+    position: relative;
 }
 
 .titleSkillsSoftware{
-    margin-top: 200px;
+    
     text-align: right;
     font-size: 2.1em;
     opacity: 0;
@@ -128,7 +128,8 @@
 
     .infoSkillsSoftware div:nth-child(2){
         margin: 0;
-        width: 60%;
+        right: 25px;
+        width: 80%;
     }
     .infoSkillsSoftware div:nth-child(2) p{
       
@@ -137,26 +138,31 @@
     }
     .infoSkillsSoftware div:nth-child(1) img{
         margin-top: 160px;
-        left: -50px;
-        width: 180px;
-        height: 190px;
+        left: -80px;
+        width: 170px;
+        height: 180px;
     }
     
 }
 
 @media (max-width: 705px){
- 
+    .SkillsSoftware{
+        margin-top: 20%;
+      
+    }
     .titleSkillsSoftware{
-        margin-top: 240px;
+        
         transition:2000ms ;
         opacity: 0;
-        font-size: 1.6em;
+        font-size: 1.5em;
+        width: 70%;
+        margin-left: 200px;
     }
  
-
     .infoSkillsSoftware div:nth-child(2){
         margin: 0;
-        width: 70%;
+        width: 100%;
+        right: 45px;
     }
 
     
@@ -171,7 +177,13 @@
 }
 
 @media (max-width:505px){
+    .SkillsSoftware{
+     
+        padding: 20px;
+        height: 16.5%;
+    }
     .titleSkillsSoftware{
+        margin-top: 0px;
         width: 100%;
         text-align: center;
         font-size: 1.4em;
@@ -183,9 +195,10 @@
     }
     .infoSkillsSoftware div:nth-child(2){
         position: absolute;
-        display: flex;
-        right: -5px;
-        margin: 0;
+        right: 0;
+        margin: auto;
         width: 135%;
+       
     }
+   
 }
