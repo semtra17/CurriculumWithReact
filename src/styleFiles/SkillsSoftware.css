@@ -122,8 +122,6 @@
  
     .titleSkillsSoftware{
         margin-top: 100px;
-        transition:2000ms ;
-        opacity: 0;
         font-size: 1.8em;
     }
  
@@ -133,8 +131,7 @@
         width: 60%;
     }
     .infoSkillsSoftware div:nth-child(2) p{
-        transition:2000ms ;
-        opacity: 0;
+      
         line-height: 1.5em;
         font-size: 1.4em;
     }
@@ -150,10 +147,10 @@
 @media (max-width: 705px){
  
     .titleSkillsSoftware{
-        margin-top: 200px;
+        margin-top: 240px;
         transition:2000ms ;
         opacity: 0;
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
  
 
@@ -165,11 +162,30 @@
     
 
     .infoSkillsSoftware div:nth-child(1) img{
-        top: -300px;
-        margin-top: 160px;
-        left: 40px;
+        top: -290px;
+        left: -60px;
         width: 100px;
         height: 100px;
     }
     
+}
+
+@media (max-width:505px){
+    .titleSkillsSoftware{
+        width: 100%;
+        text-align: center;
+        font-size: 1.4em;
+        margin-left: 25px;
+    }
+ 
+    .infoSkillsSoftware div:nth-child(1) img{
+    display: none;
+    }
+    .infoSkillsSoftware div:nth-child(2){
+        position: absolute;
+        display: flex;
+        right: -5px;
+        margin: 0;
+        width: 135%;
+    }
 }
