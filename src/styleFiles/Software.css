@@ -214,7 +214,11 @@
 
 @media (max-width: 705px){
     .Software{
-        margin-top: 50px;
+        margin-top: 200px;
+    }
+
+    .titleSoftware{
+        font-size: 1.6em;    
     }
     
     
@@ -223,6 +227,7 @@
    
     .Software{
         margin-top: 100px;
+        margin-bottom: -100px;
       
     }
     .titleSoftware{

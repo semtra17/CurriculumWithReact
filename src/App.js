@@ -160,7 +160,7 @@ class App extends Component {
                      software={this.state.software} 
                      Certifications={this.state.Certifications} 
                      Works={this.state.Works}/>
-                    <Bottom/>
+                    {/* <Bottom/> */}
                 </div>
             }
 }
