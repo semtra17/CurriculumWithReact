@@ -71,7 +71,7 @@
 }
 
 .infoWorks a{
-    
+    overflow-y: hidden;
     color: black;
     justify-content: center;
     position: relative;
@@ -86,7 +86,6 @@
     text-align: center;
     font-weight: 700;
     font-size: 30px;
-    transition: 0.8s;
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.788);
     border: none;
 }
@@ -162,6 +161,21 @@
 }
 
 @media (max-width: 992px){
+    
+    @keyframes animatedBlockWorks{
+        0%{
+            opacity: 0;
+            border-radius: 10px;
+         
+            width: 30%;
+        }
+        100%{
+            border-radius: 50px;
+        
+            opacity: 1;
+            width: 90%;
+        }
+    }
 
     .Works{
         margin-top: 5%;
@@ -193,6 +207,20 @@
     }
 }
 @media (max-width: 705px){
+    @keyframes animatedBlockWorks{
+        0%{
+            opacity: 0;
+            border-radius: 10px;
+         
+            width: 30%;
+        }
+        100%{
+            border-radius: 50px;
+        
+            opacity: 1;
+            width: 100%;
+        }
+    }
 
     .Works{
         margin-top: -50%;
@@ -223,8 +251,9 @@
     }
 
 }
-@media (max-width: 705px){
+@media (max-width: 505px){
 
+    
     .infoWorks h3{
        margin-top: 20%;
     }

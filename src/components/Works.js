@@ -14,7 +14,7 @@ export default class Works extends Component{
                         <h3>Repositorio de mis trabajos</h3>
                     <a href="/#">
                         <img alt="git" src="../github.png" ></img>
-                         <span>GitHub : https://github.com/semtra17</span>
+                         <span>https://github.com/semtra17</span>
                          </a>
                     <h3>Instagram de mi empresa de desarrollo web y diseño gráfico</h3>
                     <a href="/#"><img alt="instagram" src="../instagram.png" ></img>

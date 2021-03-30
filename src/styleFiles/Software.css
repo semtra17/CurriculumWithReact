@@ -62,7 +62,7 @@
 
 .iconsSoftware ul{
     width: 100%;
-    
+    overflow: hidden;
     
     list-style: none;
     display: flex;

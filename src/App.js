@@ -11,6 +11,7 @@ import Bottom  from './components/Bottom';
 
 
 class App extends Component {
+    
     state = {
         sticky:"menu",
         title:"title animation",
@@ -37,52 +38,99 @@ class App extends Component {
     }
     
     onWheelFunctions = e =>{
-        if(window.scrollY > 0)
-            this.setState({sticky:"menu sticky"});
-        else
-            this.setState({sticky:"menu"});
+  
+   
 
+            if(window.innerWidth > 900){
+                    if(window.scrollY > 0)
+                    this.setState({sticky:"menu sticky"});
+                else
+                    this.setState({sticky:"menu"});
 
-        if(window.scrollY > 80){
-            this.setState({linesPicture:"linesPicture animation"});
-            this.setState({myPicture:"myPicture animation"});
-        }
-        else if(window.scrollY < 20){
-            this.setState({linesPicture:"linesPicture"});
-            this.setState({myPicture:"myPicture"});
-        }
-
-        if(window.scrollY > document.documentElement.scrollHeight * 0.045){
-            this.setState({whoAmIText:"WhoAmI animation"});
-        }else{
-            this.setState({whoAmIText:"WhoAmI"});
-        }
-        if(window.scrollY > document.documentElement.scrollHeight * 0.16){
-            this.setState({SkillsSoftware:"SkillsSoftware animation"});
-        }else{
-            this.setState({SkillsSoftware:"SkillsSoftware"});
-        }
-        if(window.scrollY > document.documentElement.scrollHeight * 0.30){
-            this.setState({software:"Software animation"});
-        }else{
-            this.setState({software:"Software"});
-        }
-
-        if(window.scrollY > document.documentElement.scrollHeight * 0.40){
-            this.setState({Certifications:"Certifications animation"});
-        }else{
-            this.setState({Certifications:"Certifications"});
-        }
-        if(window.scrollY > document.documentElement.scrollHeight * 0.55){
-            this.setState({Works:"Works animation"});
-        }else{
-            this.setState({Works:"Works"});
-        }
-        if(window.scrollY > document.documentElement.scrollHeight * 0.75){
-            this.setState({Contact:"Contact animation"});
-        }else{
-            this.setState({Contact:"Contact"});
-        }
+                if(window.scrollY > 80){
+                    this.setState({linesPicture:"linesPicture animation"});
+                    this.setState({myPicture:"myPicture animation"});
+                }
+                else if(window.scrollY < 20){
+                    this.setState({linesPicture:"linesPicture"});
+                    this.setState({myPicture:"myPicture"});
+                }
+        
+                if(window.scrollY > document.documentElement.scrollHeight * 0.045){
+                    this.setState({whoAmIText:"WhoAmI animation"});
+                }else{
+                    this.setState({whoAmIText:"WhoAmI"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.16){
+                    this.setState({SkillsSoftware:"SkillsSoftware animation"});
+                }else{
+                    this.setState({SkillsSoftware:"SkillsSoftware"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.30){
+                    this.setState({software:"Software animation"});
+                }else{
+                    this.setState({software:"Software"});
+                }
+        
+                if(window.scrollY > document.documentElement.scrollHeight * 0.40){
+                    this.setState({Certifications:"Certifications animation"});
+                }else{
+                    this.setState({Certifications:"Certifications"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.55){
+                    this.setState({Works:"Works animation"});
+                }else{
+                    this.setState({Works:"Works"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.75){
+                    this.setState({Contact:"Contact animation"});
+                }else{
+                    this.setState({Contact:"Contact"});
+                }
+            }    
+            if(window.innerWidth <= 900){
+                if(window.scrollY > 100){
+                    this.setState({linesPicture:"linesPicture animation"});
+                    this.setState({myPicture:"myPicture animation"});
+                }
+                else if(window.scrollY < 20){
+                    this.setState({linesPicture:"linesPicture"});
+                    this.setState({myPicture:"myPicture"});
+                }
+        
+                if(window.scrollY > document.documentElement.scrollHeight * 0.045){
+                    this.setState({whoAmIText:"WhoAmI animation"});
+                }else{
+                    this.setState({whoAmIText:"WhoAmI"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.22){
+                    this.setState({SkillsSoftware:"SkillsSoftware animation"});
+                }else{
+                    this.setState({SkillsSoftware:"SkillsSoftware"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.36){
+                    this.setState({software:"Software animation"});
+                }else{
+                    this.setState({software:"Software"});
+                }
+        
+                if(window.scrollY > document.documentElement.scrollHeight * 0.44){
+                    this.setState({Certifications:"Certifications animation"});
+                }else{
+                    this.setState({Certifications:"Certifications"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.67){
+                    this.setState({Works:"Works animation"});
+                }else{
+                    this.setState({Works:"Works"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.79){
+                    this.setState({Contact:"Contact animation"});
+                }else{
+                    this.setState({Contact:"Contact"});
+                }
+            }    
+        
 
         
     }
@@ -96,50 +144,98 @@ class App extends Component {
     }
 
     onloadFunction = () => {
-        if(window.scrollY <= 0){
-            this.setState({sticky:"menu"});
-            this.setState({linesPicture:"linesPicture"});
-            this.setState({myPicture:"myPicture"});
+        if(window.innerWidth > 900){
+            if(window.scrollY <= 0){
+                this.setState({sticky:"menu"});
+                this.setState({linesPicture:"linesPicture"});
+                this.setState({myPicture:"myPicture"});
+                
+            }
+            else if(window.scrollY > 100){
+                this.setState({linesPicture:"linesPicture animation"});
+                this.setState({myPicture:"myPicture animation"});
+                this.setState({sticky:"menu sticky"});
+            }
             
+            if(window.scrollY > document.documentElement.scrollHeight * 0.045){
+                this.setState({whoAmIText:"WhoAmI animation"});
+            }
+            else{
+                this.setState({whoAmIText:"WhoAmI"});
+            }
+            if(window.scrollY > document.documentElement.scrollHeight * 0.16){
+                this.setState({SkillsSoftware:"SkillsSoftware animation"});
+            }else{
+                this.setState({SkillsSoftware:"SkillsSoftware"});
+            }
+            
+            if(window.scrollY > document.documentElement.scrollHeight * 0.30){
+                this.setState({software:"Software animation"});
+            }else{
+                this.setState({software:"Software"});
+            }
+            if(window.scrollY > document.documentElement.scrollHeight * 0.40){
+             
+                this.setState({Certifications:"Certifications animation"});
+            }else{
+                this.setState({Certifications:"Certifications"});
+            }
+            if(window.scrollY > document.documentElement.scrollHeight * 0.55){
+                this.setState({Works:"Works animation"});
+            }else{
+                this.setState({Works:"Works"});
+            }
+    
+            if(window.scrollY > document.documentElement.scrollHeight * 0.75){
+                this.setState({Contact:"Contact animation"});
+            }else{
+                this.setState({Contact:"Contact"});
+            }
         }
-        else if(window.scrollY > 100){
-            this.setState({linesPicture:"linesPicture animation"});
-            this.setState({myPicture:"myPicture animation"});
-            this.setState({sticky:"menu sticky"});
-        }
+        if(window.innerWidth <= 900){
+            if(window.scrollY <= 0){
+                this.setState({sticky:"menu"});
+                this.setState({linesPicture:"linesPicture"});
+                this.setState({myPicture:"myPicture"});
+                
+            }
+            else if(window.scrollY > 100){
+                this.setState({linesPicture:"linesPicture animation"});
+                this.setState({myPicture:"myPicture animation"});
+                
+            }
+            
+           if(window.scrollY > document.documentElement.scrollHeight * 0.045){
+                    this.setState({whoAmIText:"WhoAmI animation"});
+                }else{
+                    this.setState({whoAmIText:"WhoAmI"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.22){
+                    this.setState({SkillsSoftware:"SkillsSoftware animation"});
+                }else{
+                    this.setState({SkillsSoftware:"SkillsSoftware"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.36){
+                    this.setState({software:"Software animation"});
+                }else{
+                    this.setState({software:"Software"});
+                }
         
-        if(window.scrollY > document.documentElement.scrollHeight * 0.045){
-            this.setState({whoAmIText:"WhoAmI animation"});
-        }
-        else{
-            this.setState({whoAmIText:"WhoAmI"});
-        }
-        if(window.scrollY > document.documentElement.scrollHeight * 0.16){
-            this.setState({SkillsSoftware:"SkillsSoftware animation"});
-        }else{
-            this.setState({SkillsSoftware:"SkillsSoftware"});
-        }
-        
-        if(window.scrollY > document.documentElement.scrollHeight * 0.30){
-            this.setState({software:"Software animation"});
-        }else{
-            this.setState({software:"Software"});
-        }
-        if(window.scrollY > document.documentElement.scrollHeight * 0.40){
-            this.setState({Certifications:"Certifications animation"});
-        }else{
-            this.setState({Certifications:"Certifications"});
-        }
-        if(window.scrollY > document.documentElement.scrollHeight * 0.55){
-            this.setState({Works:"Works animation"});
-        }else{
-            this.setState({Works:"Works"});
-        }
-
-        if(window.scrollY > document.documentElement.scrollHeight * 0.75){
-            this.setState({Contact:"Contact animation"});
-        }else{
-            this.setState({Contact:"Contact"});
+                if(window.scrollY > document.documentElement.scrollHeight * 0.44){
+                    this.setState({Certifications:"Certifications animation"});
+                }else{
+                    this.setState({Certifications:"Certifications"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.67){
+                    this.setState({Works:"Works animation"});
+                }else{
+                    this.setState({Works:"Works"});
+                }
+                if(window.scrollY > document.documentElement.scrollHeight * 0.79){
+                    this.setState({Contact:"Contact animation"});
+                }else{
+                    this.setState({Contact:"Contact"});
+                }
         }
     }
 
