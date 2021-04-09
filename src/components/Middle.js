@@ -10,7 +10,7 @@ import SkillsSoftware from './SkillsSoftware';
 import Certifications from './Certifications';
 import Software from './Software';
 import Works from './Works';
-import Contact from './Contact';
+
 
 
 
@@ -32,7 +32,7 @@ export default class Middle extends Component {
            certificate={this.props.certificate}
            Certifications={this.props.Certifications}/>
            <Works Works={this.props.Works}/>
-           <Contact Contact={this.props.Contact}/>
+           
         </div>
     }
 }

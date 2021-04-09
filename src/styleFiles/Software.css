@@ -3,6 +3,7 @@
     height: 10%;
     padding: 30px;
     position: relative;
+   
     
 }
 
@@ -15,7 +16,6 @@
     opacity: 0;
     transition: 0.5s;
  
-    
 }
 
 .Software.animation .titleSoftware{
@@ -76,6 +76,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
+    opacity: 0;
     transition: 0.5s;
 }
 
@@ -98,59 +99,62 @@
     height: 77px;
     width: 85px;
 }
+.Software.animation .iconsSoftware ul li{
+    opacity: 1;
+}
 .Software.animation .iconsSoftware ul li:nth-child(1){
-    animation: animatedIcons1 2s ease backwards;
+    animation: animatedIcons1 2s  backwards;
     animation-delay: 0.15s
 }
 .Software.animation .iconsSoftware ul li:nth-child(3){
-    animation: animatedIcons1 2s ease backwards;
+    animation: animatedIcons1 2s  backwards;
     animation-delay: 0.55s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(5){
-    animation: animatedIcons1 2s ease backwards;
+    animation: animatedIcons1 2s  backwards;
     animation-delay: 1.05s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(7){
-    animation: animatedIcons1 2s ease backwards;
+    animation: animatedIcons1 2s  backwards;
     animation-delay: 1.55s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(9){
-    animation: animatedIcons1 2s ease backwards;
+    animation: animatedIcons1 2s  backwards;
     animation-delay: 2.30s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(11){
-    animation: animatedIcons1 2s ease backwards;
+    animation: animatedIcons1 2s  backwards;
     animation-delay: 2.80s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(13){
-    animation: animatedIcons1 2s ease backwards;
+    animation: animatedIcons1 2s  backwards;
     animation-delay: 3.3s;
 }
 
 
 
 .Software.animation .iconsSoftware ul li:nth-child(2){
-    animation: animatedIcons2 2s ease backwards;
+    animation: animatedIcons2 2s  backwards;
     animation-delay: 0.3s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(4){
-    animation: animatedIcons2 2s ease backwards;
+    animation: animatedIcons2 2s  backwards;
     animation-delay: 0.7s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(6){
-    animation: animatedIcons2 2s ease backwards;
+    animation: animatedIcons2 2s  backwards;
     animation-delay: 1.3s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(8){
-    animation: animatedIcons2 2s ease backwards;
+    animation: animatedIcons2 2s  backwards;
     animation-delay: 1.8s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(10){
-    animation: animatedIcons2 2s ease backwards;
+    animation: animatedIcons2 2s  backwards;
     animation-delay: 2.3s;
 }
 .Software.animation .iconsSoftware ul li:nth-child(12){
-    animation: animatedIcons2 2s ease backwards;
+    animation: animatedIcons2 2s  backwards;
     animation-delay: 2.8s;
 }
 
@@ -236,6 +240,32 @@
        
         font-size: 1.4em;    
     }
+    /* .Software .iconsSoftware{
+        opacity: 0;
+    }
+    .Software.animation .iconsSoftware{
+        opacity: 1;
+        transition: 2s;
+    }
+    
+@keyframes animatedIcons1{
+    0%{
+       
+    }
+    100%{
+     
+    } 
+  
+}
+@keyframes animatedIcons2{
+    0%{
+     
+    }
+    100%{
+   
+    } 
+  
+} */
 
     .iconsSoftware ul li img{
         align-self: center;

@@ -13,7 +13,7 @@ export default class Contact extends Component{
                 <div className="infoContact">
                     <a href="/wa.link/sjjoq1" className="box">
                         <div className="imgBx">
-                            <img alt="wp" src="../whatsapp.png"></img>
+                            <img alt="Whatsapp blanco" src="../Whatsapp blanco.png"></img>
                         </div>
                         
                         <div className="content">
@@ -25,7 +25,7 @@ export default class Contact extends Component{
                     </a>
                     <a href="/#" className="box">
                         <div className="imgBx">
-                            <img alt="gmail" src="../gmail.png"></img>
+                            <img alt="gmail" src="../gmail blanco.png"></img>
                         </div>
                         
                         <div className="content">
@@ -38,7 +38,7 @@ export default class Contact extends Component{
                 
                     <a  href="/linkedin.com/in/luciano-aizar-assefh-80a09b1b4" className="box">
                         <div className="imgBx">
-                            <img alt="linkdin" src="../linkedin (1).png"></img>
+                            <img alt="linkdin" src="../linkedin blanco.png"></img>
                         </div>  
                         <div className="content">
                             <div>
@@ -49,7 +49,7 @@ export default class Contact extends Component{
                     </a>
                     <a href="/#" className="box">
                         <div className="imgBx">
-                            <img alt="telegram" src="../telegram.png"></img>
+                            <img alt="telegram" src="../telegramblanco.png"></img>
                         </div>
                         
                         <div className="content">

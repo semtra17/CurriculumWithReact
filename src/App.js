@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import Top  from './components/Top';
 import Middle  from './components/Middle';
 import Bottom  from './components/Bottom';
-
+import Contact from './components/Contact';
 
 
 
@@ -25,22 +25,19 @@ class App extends Component {
         Contact:"Contact",
     }
 
-    keyEscape = ()=>{
-      
+    keyEscape = () =>{
         let certificate = document.getElementById("certificado");
         document.addEventListener("keyup", (e =>{
             if(e.key === "Escape"){
-
                 certificate.className = "Certificate";
             }
-
         }))
     }
     
     onWheelFunctions = e =>{
-  
-   
-
+            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
+            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
+            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
             if(window.innerWidth > 900){
                     if(window.scrollY > 0)
                     this.setState({sticky:"menu sticky"});
@@ -87,34 +84,37 @@ class App extends Component {
                 }else{
                     this.setState({Contact:"Contact"});
                 }
-            }    
+            }   
+            //============================= Dispositivo MOVIL FUNCIONES RUEDA RATON =============================
+            //============================= Dispositivo MOVIL FUNCIONES RUEDA RATON =============================
+            //============================= Dispositivo MOVIL FUNCIONES RUEDA RATON =============================
             if(window.innerWidth <= 900){
                 if(window.scrollY > 100){
                     this.setState({linesPicture:"linesPicture animation"});
                     this.setState({myPicture:"myPicture animation"});
                 }
-                else if(window.scrollY < 20){
+                else if(window.scrollY < 10){
                     this.setState({linesPicture:"linesPicture"});
                     this.setState({myPicture:"myPicture"});
                 }
         
-                if(window.scrollY > document.documentElement.scrollHeight * 0.045){
+                if(window.scrollY > document.documentElement.scrollHeight * 0.044){
                     this.setState({whoAmIText:"WhoAmI animation"});
                 }else{
                     this.setState({whoAmIText:"WhoAmI"});
                 }
-                if(window.scrollY > document.documentElement.scrollHeight * 0.22){
+                if(window.scrollY > document.documentElement.scrollHeight * 0.19){
                     this.setState({SkillsSoftware:"SkillsSoftware animation"});
                 }else{
                     this.setState({SkillsSoftware:"SkillsSoftware"});
                 }
-                if(window.scrollY > document.documentElement.scrollHeight * 0.36){
+                if(window.scrollY > document.documentElement.scrollHeight * 0.35){
                     this.setState({software:"Software animation"});
                 }else{
                     this.setState({software:"Software"});
                 }
         
-                if(window.scrollY > document.documentElement.scrollHeight * 0.44){
+                if(window.scrollY > document.documentElement.scrollHeight * 0.41){
                     this.setState({Certifications:"Certifications animation"});
                 }else{
                     this.setState({Certifications:"Certifications"});
@@ -144,6 +144,9 @@ class App extends Component {
     }
 
     onloadFunction = () => {
+        this.keyEscape();
+        //============================= Funciones ONLOAD PARA ESCRITORIO =============================
+        //============================= Funciones ONLOAD PARA ESCRITORIO =============================
         if(window.innerWidth > 900){
             if(window.scrollY <= 0){
                 this.setState({sticky:"menu"});
@@ -192,6 +195,9 @@ class App extends Component {
                 this.setState({Contact:"Contact"});
             }
         }
+            // Dispositivo MOVIL 
+            // Dispositivo MOVIL 
+            // Dispositivo MOVIL 
         if(window.innerWidth <= 900){
             if(window.scrollY <= 0){
                 this.setState({sticky:"menu"});
@@ -247,16 +253,17 @@ class App extends Component {
                 onWheel={this.onWheelFunctions} 
                 onLoad={this.onloadFunction} 
                 onTouchMove={this.onWheelFunctions}
+                onScroll={this.onWheelFunctions}
                 >
                     <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
                     <Middle 
-                     Contact={this.state.Contact} 
                      whoAmIText={this.state.whoAmIText} 
                      SkillsSoftware={this.state.SkillsSoftware} 
                      software={this.state.software} 
                      Certifications={this.state.Certifications} 
                      Works={this.state.Works}/>
-                    {/* <Bottom/> */}
+                    <Contact Contact={this.state.Contact}/>
+                   
                 </div>
             }
 }
