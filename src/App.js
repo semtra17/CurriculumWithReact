@@ -119,12 +119,12 @@ class App extends Component {
                 }else{
                     this.setState({Certifications:"Certifications"});
                 }
-                if(window.scrollY > document.documentElement.scrollHeight * 0.67){
+                if(window.scrollY > document.documentElement.scrollHeight * 0.60){
                     this.setState({Works:"Works animation"});
                 }else{
                     this.setState({Works:"Works"});
                 }
-                if(window.scrollY > document.documentElement.scrollHeight * 0.79){
+                if(window.scrollY > document.documentElement.scrollHeight * 0.77){
                     this.setState({Contact:"Contact animation"});
                 }else{
                     this.setState({Contact:"Contact"});
@@ -136,7 +136,6 @@ class App extends Component {
     }
 
     outClick = (e) =>{
-       
         let certificado = document.getElementById("certificado");
         if(e.target.className !=  "Certificate active" && certificado.className === "Certificate active"){
             certificado.className = "Certificate";
@@ -232,12 +231,12 @@ class App extends Component {
                 }else{
                     this.setState({Certifications:"Certifications"});
                 }
-                if(window.scrollY > document.documentElement.scrollHeight * 0.67){
+                if(window.scrollY > document.documentElement.scrollHeight * 0.60){
                     this.setState({Works:"Works animation"});
                 }else{
                     this.setState({Works:"Works"});
                 }
-                if(window.scrollY > document.documentElement.scrollHeight * 0.79){
+                if(window.scrollY > document.documentElement.scrollHeight * 0.77){
                     this.setState({Contact:"Contact animation"});
                 }else{
                     this.setState({Contact:"Contact"});
@@ -245,6 +244,7 @@ class App extends Component {
         }
     }
 
+  
     
     render() {
         
@@ -253,7 +253,6 @@ class App extends Component {
                 onWheel={this.onWheelFunctions} 
                 onLoad={this.onloadFunction} 
                 onTouchMove={this.onWheelFunctions}
-                onScroll={this.onWheelFunctions}
                 >
                     <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
                     <Middle 

@@ -29,10 +29,10 @@ export default class Menu extends Component {
             <a onClick={this.toggle} href="/#Certifications">Estudios y Certificaciones</a>
         </li>
         <li>
-            <a onClick={this.toggle} href="/#Contact">Contacto</a>
+            <a onClick={this.toggle} href="/#Works">Trabajos</a>
         </li>
         <li>
-            <a onClick={this.toggle} href="/#">Trabajos</a>
+            <a onClick={this.toggle} href="/#Contact">Contacto</a>
         </li>
     </ul>
     <div className="toggle" onClick={this.toggle}></div>
