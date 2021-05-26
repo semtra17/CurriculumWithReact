@@ -24,6 +24,13 @@ export default class Certifications extends Component{
         
     }
   
+    udemySQLServer= () => {
+        let certificado = document.getElementById("certificado");
+        certificado.className = "Certificate active";
+        this.setState({image: "../SQL Server Certificado Udemy.jpg"});
+        
+    }
+  
     
     render(){
         return <section className={this.props.Certifications} id="Certifications" >
@@ -82,6 +89,11 @@ export default class Certifications extends Component{
                                         <div className="subtitle"><p  >Node JS( De Cero A Experto)</p></div>
                                         <div className="subInfo"><p>Udemy 06/10/2020</p></div>
                                         <div className="certificate"><a href="#Certificate" onClick={this.udemyNode}><img src="../desplazarse.png" alt="udemyNodeJS" ></img></a></div>
+                                    </li>
+                                    <li>
+                                        <div className="subtitle"><p  >SQL Server - Administración de base de datos</p></div>
+                                        <div className="subInfo"><p>Udemy 26/05/2021</p></div>
+                                        <div className="certificate"><a href="#Certificate" onClick={this.udemyNode}><img src="../desplazarse.png" alt="udemySQLServer" ></img></a></div>
                                     </li>
                                 </ul>
                                 <Certificate image={this.state.image}/>       
