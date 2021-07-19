@@ -15,13 +15,12 @@ export default class SkillsSoftware extends Component {
                             <div><img alt="skills" src="../habilidades.png" ></img></div>
                             <div >
                                 <p>
-                                Mi herramienta y lenguaje principal de desarrollo es JavaScript, me gusta usarlo tanto del lado del cliente como del servidor.<br/> 
-                                En mis trabajos he aplicado y utilizado por mi mismo JavaScript, CSS y HTML como principales del desarrollo web, librerías y frameworks como Bootstrap (para acelerar el proceso de maquetación estética), Electron Js., Express, JQuery, Webpack y Babel.<br/> 
+                                Mis herramientas y lenguajes principales son Java y Javascript, he utilizado ambos tanto para el frontend como para el backend en mis proyectos.<br/> 
+                                En mis trabajos tambien utilizo ORMs como hibernate con Java aplicandolo mediante Spring, y Sequelize con Javascript,.<br/> 
                                 Con respecto a la base de datos, he utilizado tanto relacionales como no relacionales, y mis preferencias son MySQL y MongoDB.<br/> 
                                 Para pruebas unitarias de mi código, utilizo PostMan.<br/> 
-                                Si bien aun no domino completamente React, estoy en proceso de aprenderlo para poder usarlo profesionalmente.<br/> 
-
-                             
+                                Actualmente formo parte de la Academia de Ayi Group donde me perfecciono en PWA, React, Java y Spring.<br/> 
+                            
                                 </p>
                             </div>
                             

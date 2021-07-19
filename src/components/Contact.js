@@ -23,7 +23,7 @@ export default class Contact extends Component{
                             </div>
                         </div>
                     </a>
-                    <a  className="box">
+                    <a  className="box" href="mailto:semtra17@gmail.com?subject=Contact">
                         <div className="imgBx">
                             <img alt="gmail" src="../gmail blanco.png"></img>
                         </div>
