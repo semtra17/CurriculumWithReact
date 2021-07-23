@@ -83,11 +83,13 @@
     opacity: 1;
     animation: animatedImg 2s ease ;
 }
+
 .WhoAmI.animation .infoWhoAmI div:nth-child(1) p{
     transition:2000ms ;
     opacity: 1;
     animation: animatedText 3s ease ;
 }
+
 @keyframes animatedImg{
     0%{
         opacity: 0;

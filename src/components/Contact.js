@@ -1,5 +1,6 @@
 import React,{Link, Component} from 'react';
 import "../styleFiles/Contact.css"
+import ContactCard from './ContactCard';
 
 export default class Contact extends Component{
 
@@ -11,54 +12,10 @@ export default class Contact extends Component{
                 </div>
                 <span></span>
                 <div className="infoContact">
-                    <a href="http://wa.link/sjjoq1" className="box">
-                        <div className="imgBx">
-                            <img alt="Whatsapp blanco" src="../Whatsapp blanco.png"></img>
-                        </div>
-                        
-                        <div className="content">
-                            <div>
-                                <h2>WhatsApp</h2>
-                                <p>(0385) 154749296</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a  className="box" href="mailto:semtra17@gmail.com?subject=Contact">
-                        <div className="imgBx">
-                            <img alt="gmail" src="../gmail blanco.png"></img>
-                        </div>
-                        
-                        <div className="content">
-                            <div>
-                                <h2>Gmail</h2>
-                                <p>semtra17@gmail.com</p>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a  href="http://linkedin.com/in/luciano-aizar-assefh-80a09b1b4" className="box">
-                        <div className="imgBx">
-                            <img alt="linkdin" src="../linkedin blanco.png"></img>
-                        </div>  
-                        <div className="content">
-                            <div>
-                                <h2>LinkedIn</h2>
-                                <p>linkedin.com/in/luciano-aizar-assefh-80a09b1b4</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a  className="box">
-                        <div className="imgBx">
-                            <img alt="telegram" src="../telegramblanco.png"></img>
-                        </div>
-                        
-                        <div className="content">
-                            <div>
-                                <h2>Telegram</h2>
-                                <p>(0385) 154749296</p>
-                            </div>
-                        </div>
-                    </a>
+                    <ContactCard hrefPorpuse="http://wa.link/sjjoq1" altText="Whatsapp blanco" srcImg="../Whatsapp blanco.png" title="WhatsApp" info="(0385) 154749296" />
+                    <ContactCard hrefPorpuse="mailto:semtra17@gmail.com?subject=Contact" altText="gmail" srcImg="../gmail blanco.png" title="Gmail" info="semtra17@gmail.com" />
+                    <ContactCard hrefPorpuse="http://linkedin.com/in/luciano-aizar-assefh-80a09b1b4" altText="linkdin" srcImg="../linkedin blanco.png" title="LinkedIn" info="linkedin.com/in/luciano-aizar-assefh-80a09b1b4" />
+                    <ContactCard hrefPorpuse="" altText="telegram" srcImg="../telegramblanco.png" title="Telegram" info="(0385) 154749296" />
            
                 </div>
                 

@@ -3,8 +3,11 @@ import '../styleFiles/Menu.css';
 
 
 export default class Menu extends Component {
-    state = {
-        sticky:false,
+    constructor(props){
+        super(props);
+        this.state={
+            sticky:false,
+        }
     }
 
     

@@ -1,11 +1,14 @@
 import React,{Component} from 'react';
 import "../styleFiles/Certifications.css"
 import Certificate from "./Certificate"
-
+import Course from "./Course"
 export default class Certifications extends Component{
-    state = {
-        certificate: "Certificate",
-        image: "",
+    constructor(props){
+        super(props);
+        this.state ={
+            certificate: "Certificate",
+            image: "",
+        }
     }
     udemyJava= () => {
         let certificado = document.getElementById("certificado");
@@ -75,26 +78,10 @@ export default class Certifications extends Component{
                             <h3>Cursos</h3>
                             <div className="infoCourses">
                                 <ul>
-                                    <li>
-                                        <div className="subtitle"><p  >Javascript (Es5)</p></div>
-                                        <div className="subInfo"><p>Udemy 16/05/2020</p></div>
-                                        <div className="certificate"><a href="#Certificate" onClick={this.udemyJava}><img src="../desplazarse.png" alt="udemyJavascript" ></img></a></div>
-                                    </li>
-                                    <li>
-                                        <div className="subtitle"><p  >Next Lvl Css Creative Hover And Animattion Effects</p></div>
-                                        <div className="subInfo"><p>Udemy 02/05/2020</p></div>
-                                        <div className="certificate"><a href="#Certificate" onClick={this.udemyCss}><img src="../desplazarse.png" alt="udemyCss" ></img></a></div>
-                                    </li>
-                                    <li>
-                                        <div className="subtitle"><p  >Node JS( De Cero A Experto)</p></div>
-                                        <div className="subInfo"><p>Udemy 06/10/2020</p></div>
-                                        <div className="certificate"><a href="#Certificate" onClick={this.udemyNode}><img src="../desplazarse.png" alt="udemyNodeJS" ></img></a></div>
-                                    </li>
-                                    <li>
-                                        <div className="subtitle"><p  >SQL Server - Administración de base de datos</p></div>
-                                        <div className="subInfo"><p>Udemy 26/05/2021</p></div>
-                                        <div className="certificate"><a href="#Certificate" onClick={this.udemyNode}><img src="../desplazarse.png" alt="udemySQLServer" ></img></a></div>
-                                    </li>
+                                <Course courseTitle="Javascript (Es5)" courseFunction={this.udemyJava} courseAlt="udemyJavascript" courseInfo="Udemy 16/05/2020"/>
+                                <Course courseTitle="Next Lvl Css Creative Hover And Animattion Effects" courseFunction={this.udemyCss} courseAlt="udemyCss" courseInfo="Udemy 02/05/20"/>
+                                <Course courseTitle="Node JS( De Cero A Experto)" courseFunction={this.udemyNode} courseAlt="udemyNodeJS" courseInfo="Udemy 06/10/2020"/>
+                                <Course courseTitle="SQL Server - Administración de base de datos" courseFunction={this.udemySQLServer} courseAlt="udemySQLServer" courseInfo="Udemy 26/05/2021"/>                 
                                 </ul>
                                 <Certificate image={this.state.image}/>       
                             </div>
