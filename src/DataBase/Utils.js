@@ -8,7 +8,7 @@
      En este momento, me encuentro conformando un equipo y trabajando en mi propia startup de desarrollo web y diseño gráfico.`,
  },{
     softwareSkillsText: `Mis herramientas y lenguajes principales son Java y Javascript, he utilizado ambos tanto para el frontend como para el backend en mis proyectos.
-    En mis trabajos tambien utilizo ORMs como Hibernate con Java aplicandolo mediante Spring, y Sequelize con Javascript,.
+    En mis trabajos tambien utilizo ORMs como Hibernate con Java aplicandolo mediante Spring y Sequelize con Javascript.
     Con respecto a la base de datos, he utilizado tanto relacionales como no relacionales, y mis preferencias son MySQL y MongoDB.
     Para pruebas unitarias de mi código, utilizo PostMan.
     Actualmente formo parte de la Academia de Ayi Group donde me perfecciono en PWA, React, Java y Spring.`,
