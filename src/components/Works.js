@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
 import "../styleFiles/Works.css"
 
-export default class Works extends Component{
+export default function Works(props){
 
-    render(){
-        return <section className={this.props.Works} id="Works">
+  
+        return (<section className={props.Works} id="Works">
            
                 <div className="titleWorks">
                     <h2>Trabajos</h2>
@@ -24,9 +24,9 @@ export default class Works extends Component{
                 
            
 
-        </section>
+        </section>)
 
-    }
+    
 
 
 }

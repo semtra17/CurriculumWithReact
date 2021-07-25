@@ -1,17 +1,11 @@
 import React,{Component} from 'react';
 import "../styleFiles/WhoAmI.css"
 
-export default class WhoAmI extends Component{
-    constructor(props){
-        super(props);
-
-       this.state ={
-
-       }
-    }
+export default function WhoAmI(props){
+   
     
-    render(){
-        return <section className={this.props.whoAmIClassName} id="WhoAmI">
+    
+        return (<section className={props.whoAmIClassName} id="WhoAmI">
             
             <div className="titleWhoAmI">
                 <h2>¿Quién soy?</h2>
@@ -21,7 +15,7 @@ export default class WhoAmI extends Component{
             <div className="infoWhoAmI">
                 <div >
                     <p>
-                         {this.props.whoAmIProfileText}</p>
+                         {props.whoAmIProfileText}</p>
                    
                 </div>
                 <div><img alt="personality" src="../personalidad.png" ></img></div>
@@ -29,9 +23,9 @@ export default class WhoAmI extends Component{
                 
            
 
-        </section>
+        </section>)
 
-    }
+    
 
 
 }

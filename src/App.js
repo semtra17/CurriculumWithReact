@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-
+import Utils from './DataBase/Utils';
 // componentes
 
 import Top  from './components/Top';
@@ -16,31 +16,18 @@ class App extends Component {
         this.state = {
             // Component WhoAmI
             //  Properties WhoAmI
-            whoAmIProfileText:` Soy Luciano Aizar Assefh, tengo 24 años, soy programador, desarrollador web y actualmente estudiante de 3er año en la carrera Licenciatura en Sistemas en la Universidad Nacional de Lanús. 
-            Actualmente me enfoco en el desarrollo web y estoy comenzando a introducirme lentamente en la creación de aplicaciones móviles con React-Native. 
-            Mis lenguajes de preferencia en este momento, es JavaScript y JAVA, tanto para desarrollo web como para el desarrollo de aplicaciones. 
-            Complemento mi construcción frontend con software de diseño como Adobe Photoshop y Adobe XD 
-            Me considero una persona entusiasta, creativa, trabajadora y perseverante, siempre intento estar actualizado y perfeccionar mis habilidades. 
-            En este momento me encuentro conformando un equipo y trabajando en mi propia startup de desarrollo web y diseño gráfico.`,
+            whoAmIProfileText:Utils[0].profileText,
             whoAmIClassName:"WhoAmI",
             // Component SoftwareSkills
             //  Properties SoftwareSkills
             softwareSkills:"softwareSkills",
-            softwareSkillsText: `Mis herramientas y lenguajes principales son Java y Javascript, he utilizado ambos tanto para el frontend como para el backend en mis proyectos.
-            En mis trabajos tambien utilizo ORMs como Hibernate con Java aplicandolo mediante Spring, y Sequelize con Javascript,.
-            Con respecto a la base de datos, he utilizado tanto relacionales como no relacionales, y mis preferencias son MySQL y MongoDB.
-            Para pruebas unitarias de mi código, utilizo PostMan.
-            Actualmente formo parte de la Academia de Ayi Group donde me perfecciono en PWA, React, Java y Spring.`,
-
+            softwareSkillsText: Utils[1].softwareSkillsText,
              // Component Software
             //  Properties
             software:"Software",
-
             sticky:"menu",
-            title:"title animation",
             linesPicture:"linesPicture",
             myPicture:"myPicture",
-            
             Certifications:"Certifications",
             Works:"Works",
             Contact:"Contact",
@@ -61,7 +48,7 @@ class App extends Component {
             //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
             //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
             //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
-        
+
             if(window.innerWidth > 900){
                     if(window.scrollY > 0)
                     this.setState({sticky:"menu sticky"});
@@ -165,8 +152,8 @@ class App extends Component {
             certificado.className = "Certificate";
         }
     }
-
-    onloadFunction = () => {
+    // Utilizando componentDidMount para escuchar la inicialización del componente Padre y renderizar animación correspondiente dependiendo el lugar situado
+    componentDidMount = () => {
         this.keyEscape();
         //============================= Funciones ONLOAD PARA ESCRITORIO =============================
         //============================= Funciones ONLOAD PARA ESCRITORIO =============================
@@ -271,11 +258,10 @@ class App extends Component {
   
     
     render() {
-        
                 return <div className="container" 
                 onClickCapture={this.outClick} 
                 onWheel={this.onWheelFunctions} 
-                onLoad={this.onloadFunction} 
+                
                 onTouchMove={this.onWheelFunctions}
                 >
                     <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
@@ -291,6 +277,7 @@ class App extends Component {
                      Certifications={this.state.Certifications} 
                      Works={this.state.Works}  />
                     <Contact Contact={this.state.Contact}/>
+                    <Bottom/>
                    
                 </div>
             }

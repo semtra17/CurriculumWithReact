@@ -15,32 +15,22 @@ import Works from './Works';
 
 
 
-
-
-
-
-export default class Middle extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            
-        }
-    }
-    render(){
+export default function Middle(props) {
+  
           
-        return <div className="middle">
+        return( <div className="middle">
             
-           <WhoAmI whoAmIClassName={this.props.whoAmIClassName} whoAmIProfileText={this.props.whoAmIProfileText} />
-           <SoftwareSkills softwareSkills={this.props.softwareSkills} 
-           softwareSkillsText={this.props.softwareSkillsText} 
+           <WhoAmI whoAmIClassName={props.whoAmIClassName} whoAmIProfileText={props.whoAmIProfileText} />
+           <SoftwareSkills softwareSkills={props.softwareSkills} 
+           softwareSkillsText={props.softwareSkillsText} 
            />
-           <Software software={this.props.software} /> 
+           <Software software={props.software} /> 
            <Certifications 
-           image={this.props.image}
-           certificate={this.props.certificate}
-           Certifications={this.props.Certifications}/>
-           <Works Works={this.props.Works}/>
+           image={props.image}
+           certificate={props.certificate}
+           Certifications={props.Certifications}/>
+           <Works Works={props.Works}/>
            
-        </div>
-    }
+        </div>)
+    
 }
