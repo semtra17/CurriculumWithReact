@@ -14,8 +14,11 @@ export default class Menu extends Component {
     toggle = (componente) =>{
         let header = document.getElementById('header');
         header.classList.toggle('active');
+        
         document.getElementById("menu").classList.add('sticky');
-        document.getElementById(componente).classList.add('animation');
+        if( document.getElementById(componente) != null){
+            document.getElementById(componente).classList.add('animation');
+        }
       }
     
     render(){

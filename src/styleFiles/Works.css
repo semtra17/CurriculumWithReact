@@ -1,4 +1,5 @@
 .Works{
+
     margin-top: 45%;
     margin-bottom: 0;
     width: 100%;
@@ -183,7 +184,7 @@
     }
 
     .Works{
-        margin-top: 5%;
+        margin-top: 40%;
         
     }
     .titleWorks{
@@ -211,6 +212,7 @@
 
     }
 }
+
 @media (max-width: 705px){
     @keyframes animatedBlockWorks{
         0%{
@@ -228,7 +230,7 @@
     }
 
     .Works{
-        margin-top: -50%;
+        margin-top: 0%;
         width: 100%;
         
         
