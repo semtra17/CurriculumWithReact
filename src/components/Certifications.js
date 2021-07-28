@@ -1,29 +1,26 @@
-import React,{Component} from 'react';
+import React,{useState,Component} from 'react';
 import "../styleFiles/Certifications.css"
 import Certificate from "./ElemCertificate"
 import Course from "./ElemCourse"
 import CoursesList from "../DataBase/CoursesList"
 import academyFormationList from "../DataBase/AcademyFormList"
 import AcademyFormElem from "./ElemAcademyForm"
-export default class Certifications extends Component{
-    constructor(props){
-        super(props);
-        this.state ={
-            certificate: "Certificate",
-            image: "",
-        }
-    }
+import { useStore } from '../store/StoreProviders';
+export default function Certifications(props){
+    const [image, setImage] = useState();
     
-    showCertificate = (certificateName) => {
+    const {certifications_component} = useStore();
+    const { className_component, enable} = certifications_component;
+    const showCertificate = (certificateName) => {
         let certificado = document.getElementById("certificado");
         certificado.className = "Certificate active";
-        this.setState({image: certificateName});
+        setImage(certificateName);
     }
   
     
-    render(){
-        
-        return <section className={this.props.Certifications} id="Certifications" >
+
+    /* {certification_conteiner} */
+        return (<section className={enable ? className_component : "desactivated"} id="Certification">
            
                 <div className="titleCertifications">
                     <h2>Estudios y Certificaciones</h2>
@@ -63,11 +60,11 @@ export default class Certifications extends Component{
                                 <ul>
                                 {CoursesList.map((c,i)=>(
 
-                                    <Course courseTitle={c.title} courseFunction={this.showCertificate} url={c.url} courseAlt={c.alt} courseInfo={c.info} key={i}/>
+                                    <Course courseTitle={c.title} courseFunction={showCertificate} url={c.url} courseAlt={c.alt} courseInfo={c.info} key={i}/>
 
                                     ))}               
                                 </ul>
-                                <Certificate image={this.state.image}/>       
+                                <Certificate image={image}/>       
                             </div>
                         </div>
                       
@@ -77,9 +74,9 @@ export default class Certifications extends Component{
                 
             
 
-        </section>
+        </section>)
 
-    }
+    
 
 
 }

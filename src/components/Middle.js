@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
-
-
+import {useStore} from '../store/StoreProviders';
 
 
 import '../styleFiles/Middle.css';
@@ -16,20 +15,15 @@ import Works from './Works';
 
 
 export default function Middle(props) {
-  
+        const {middle_component} = useStore();
           
-        return( <div className="middle">
+        return( <div className={middle_component.enable ? middle_component.className_component : "desactivated"}>
             
-           <WhoAmI whoAmIClassName={props.whoAmIClassName} whoAmIProfileText={props.whoAmIProfileText} />
-           <SoftwareSkills softwareSkills={props.softwareSkills} 
-           softwareSkillsText={props.softwareSkillsText} 
-           />
-           <Software software={props.software} /> 
-           <Certifications 
-           image={props.image}
-           certificate={props.certificate}
-           Certifications={props.Certifications}/>
-           <Works Works={props.Works}/>
+           <WhoAmI  />
+           <SoftwareSkills/>
+           <Software /> 
+           <Certifications/>
+           <Works />
            
         </div>)
     

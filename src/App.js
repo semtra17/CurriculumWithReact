@@ -1,41 +1,20 @@
 import './App.css';
-import React, { Component } from 'react';
-import Utils from './DataBase/Utils';
+import React, { useEffect,useRef } from 'react';
+import StoreProvider,{ StoreContext, }  from './store/StoreProviders';
+import { types } from "./store/StoreReducer";
 // componentes
 
 import Top  from './components/Top';
 import Middle  from './components/Middle';
 import Bottom  from './components/Bottom';
 import Contact from './components/Contact';
+import {Utils} from './DataBase/Utils';
 
+const {profileText, softwareSkillsText} = Utils;
 
-
-class App extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            // Component WhoAmI
-            //  Properties WhoAmI
-            whoAmIProfileText:Utils[0].profileText,
-            whoAmIClassName:"WhoAmI",
-            // Component SoftwareSkills
-            //  Properties SoftwareSkills
-            softwareSkills:"softwareSkills",
-            softwareSkillsText: Utils[1].softwareSkillsText,
-             // Component Software
-            //  Properties
-            software:"Software",
-            sticky:"menu",
-            linesPicture:"linesPicture",
-            myPicture:"myPicture",
-            Certifications:"Certifications",
-            Works:"Works",
-            Contact:"Contact",
-        }
-    }
-   
-
-    keyEscape = () =>{
+function App() {
+  
+    const keyEscape = () =>{
         let certificate = document.getElementById("certificado");
         document.addEventListener("keyup", (e =>{
             if(e.key === "Escape"){
@@ -43,12 +22,20 @@ class App extends Component {
             }
         }))
     }
-    
-    onWheelFunctions = e =>{
-            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
-            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
-            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
 
+    const onWheelFunctions = (e) =>{
+        if(window.scrollY > 0)
+                    this.setState({sticky:"menu sticky"});
+                else
+                    this.setState({sticky:"menu"});
+
+    }
+
+    /*const onWheelFunctions = e =>{
+            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
+            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
+            //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
+        
             if(window.innerWidth > 900){
                     if(window.scrollY > 0)
                     this.setState({sticky:"menu sticky"});
@@ -144,20 +131,20 @@ class App extends Component {
         
 
         
-    }
+    }*/
 
-    outClick = (e) =>{
+    const outClick = (e) =>{
         let certificado = document.getElementById("certificado");
         if(e.target.className !=  "Certificate active" && certificado.className === "Certificate active"){
             certificado.className = "Certificate";
         }
     }
-    // Utilizando componentDidMount para escuchar la inicialización del componente Padre y renderizar animación correspondiente dependiendo el lugar situado
-    componentDidMount = () => {
-        this.keyEscape();
+
+    useEffect(() => {
+        keyEscape();
         //============================= Funciones ONLOAD PARA ESCRITORIO =============================
         //============================= Funciones ONLOAD PARA ESCRITORIO =============================
-        if(window.innerWidth > 900){
+        /*if(window.innerWidth > 900){
             if(window.scrollY <= 0){
                 this.setState({sticky:"menu"});
                 this.setState({linesPicture:"linesPicture"});
@@ -252,35 +239,26 @@ class App extends Component {
                 }else{
                     this.setState({Contact:"Contact"});
                 }
-        }
-    }
-
-  
+        }*/
+    })
     
-    render() {
-                return <div className="container" 
-                onClickCapture={this.outClick} 
-                onWheel={this.onWheelFunctions} 
-                
-                onTouchMove={this.onWheelFunctions}
+    
+    /*onWheel={onWheelFunctions}
+    onTouchMove={onWheelFunctions}*/ 
+                return (<div className="container" 
+                onClickCapture={outClick} 
+               
                 >
-                    <Top sticky={this.state.sticky} linesPicture={this.state.linesPicture} myPicture={this.state.myPicture}  />
-                    <Middle 
-                    //  Properties whoAmIClass
-                     whoAmIClassName={this.state.whoAmIClassName} 
-                     whoAmIProfileText={this.state.whoAmIProfileText}
-                    //  Properties SoftwareSkills
-                     softwareSkills={this.state.softwareSkills}
-                     softwareSkillsText= {this.state.softwareSkillsText} 
-                     
-                     software={this.state.software} 
-                     Certifications={this.state.Certifications} 
-                     Works={this.state.Works}  />
-                    <Contact Contact={this.state.Contact}/>
+                <StoreProvider>
+                    <Top/>
+                    <Middle/>
+                    <Contact/>
                     <Bottom/>
+                </StoreProvider>
+                  
                    
-                </div>
-            }
+                </div>)
+            
 }
 
 

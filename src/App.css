@@ -15,5 +15,8 @@ html
    
     
 }
+.desactivated{
+  display: none;
+}
 
 
