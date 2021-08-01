@@ -3,10 +3,10 @@ import "../styleFiles/Works.css"
 import { useStore } from '../store/StoreProviders';
 
 export default function Works(props){
- const {works_component} = useStore();
-
+    const {components} = useStore();
+    const {className, enable} = components[7];
   
-        return (<section className={works_component.enable ? works_component.className_component : "desactivated"} id="Works">
+        return (<section className={enable ? className : "desactivated"} id="Works">
            
                 <div className="titleWorks">
                     <h2>Trabajos</h2>

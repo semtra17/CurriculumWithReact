@@ -8,9 +8,8 @@ import Menu  from './Menu';
 
 
 export default function Top (props) {
-    const {myPicture_element,linesPicture_element, top_component} = useStore();
-    const {className_element, enable} = linesPicture_element;
-        return (<div className={top_component.enable ? top_component.className_component : "desactivated"}>
+    const {components} = useStore();
+        return (<div className="top">
             <Menu/>
            <div className="container-title">
             <div className="title" >
@@ -24,11 +23,11 @@ export default function Top (props) {
                 </div>
            </div>
            <div className="containerPicture">
-            <div className={myPicture_element.enable ? myPicture_element.className_element : "desactivated"}>
+            <div className={components[1].enable ? components[1].className : "desactivated"}>
                 <img src="./2020-12-01.png" alt="Profile"></img>
             </div>
            </div>
-           <div className={enable? className_element : "desactivated"}>
+           <div className={components[2].enable? components[2].className : "desactivated"}>
                <span></span>
                <span></span>
            </div>

@@ -6,10 +6,11 @@ import SoftwareIcons from './ElemSoftwareIcons';
 import { useStore } from '../store/StoreProviders';
 
 export default function Software(props) {
-   const {software_component} = useStore();
+   const {components} = useStore();
+   const {className, enable} = components[5];
   
       
-        return (<section className={software_component.enable? software_component.className_component : "desactivated" } id="Software">
+        return (<section className={enable ? className : "desactivated" } id="Software">
                     <div>
                         <div className="titleSoftware">
                             <h2>Tecnologías, Lenguajes y Librerías</h2>

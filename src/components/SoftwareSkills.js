@@ -6,10 +6,10 @@ import '../styleFiles/SoftwareSkills.css'
 export default function SoftwareSkills(props) {
     
    const{ softwareSkillsText} = Utils;
-   const { softwareSkills_component} = useStore();
-   const { className_component, enable} = softwareSkills_component; 
+   const { components} = useStore();
+   const { className, enable} = components[4]; 
    return(
-         <section className={enable ? className_component : "desactivated"} id="softwareSkills">
+         <section className={enable ? className : "desactivated"} id="softwareSkills">
                     
                         <div className="titleSkillsSoftware">
                             <h2>Habilidades y Tecnologías</h2>

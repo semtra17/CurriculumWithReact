@@ -3,9 +3,10 @@ import "../styleFiles/Contact.css"
 import ContactCard from './ElemContactCard';
 import { useStore } from '../store/StoreProviders';
 export default function Contact(props){
-    const { contact_component} = useStore();
+    const { components} = useStore();
+    const {className, enable } = components[8];
     
-        return (<section className={contact_component.enable ? contact_component.className_component : "desactivated"} id="Contact">
+        return (<section className={enable ? className : "desactivated"} id="Contact">
             
                 <div className="titleContact">
                     <h2>Contacto</h2>

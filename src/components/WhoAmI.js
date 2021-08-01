@@ -5,9 +5,9 @@ import { useStore } from '../store/StoreProviders';
 export default function WhoAmI(props){
    
     const {profileText} = Utils;
-    const {whoAmI_component} = useStore();
-    const {className_component, enable} = whoAmI_component;
-        return (<section className={enable ? className_component: "desactivated"} id="WhoAmI">
+    const {components} = useStore();
+    const {className, enable} = components[3];
+        return (<section className={enable ? className: "desactivated"} id="WhoAmI">
             
             <div className="titleWhoAmI">
                 <h2>¿Quién soy?</h2>

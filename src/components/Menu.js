@@ -1,18 +1,21 @@
 import React, { useRef,useEffect} from 'react';
 import '../styleFiles/Menu.css';
-import { useStore } from '../store/StoreProviders';
+import { useStore,useDispatch } from '../store/StoreProviders';
+import { types } from "../store/StoreReducer";
+
 
 export default function Menu(props) {
     
-    const {menu_component } = useStore();
-
+    const {components} = useStore();
+    const dispatch = useDispatch();
     
     
     useEffect(() => {
         
     })
     
-    const {className_component, enable} = menu_component
+    const {className, enable} = components[0];
+
     const toggle = (componente) =>{
         let header = document.getElementById('header');
         header.classList.toggle('active');
@@ -25,9 +28,9 @@ export default function Menu(props) {
     
         return (<header className="header" id="header">
             
-            <ul id="menu" className={enable ? className_component : "desactivated"}>
+            <ul id="menu" className={enable ? className : "desactivated"}>
         <li>
-            <a onClick={() => toggle("WhoAmI")} href="/#WhoAmI">¿Quién soy?</a>
+            <a onClick={() => toggle('WhoAmI')} href="/#WhoAmI" >¿Quién soy?</a>
         </li>
         <li>
             <a onClick={() => toggle("softwareSkills")} href="/#softwareSkills">Habilidades y Tecnologías</a>

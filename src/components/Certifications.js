@@ -9,8 +9,8 @@ import { useStore } from '../store/StoreProviders';
 export default function Certifications(props){
     const [image, setImage] = useState();
     
-    const {certifications_component} = useStore();
-    const { className_component, enable} = certifications_component;
+    const {components} = useStore();
+    const { className, enable} = components[6];
     const showCertificate = (certificateName) => {
         let certificado = document.getElementById("certificado");
         certificado.className = "Certificate active";
@@ -20,7 +20,7 @@ export default function Certifications(props){
     
 
     /* {certification_conteiner} */
-        return (<section className={enable ? className_component : "desactivated"} id="Certification">
+        return (<section className={enable ? className : "desactivated"} id="Certification">
            
                 <div className="titleCertifications">
                     <h2>Estudios y Certificaciones</h2>
