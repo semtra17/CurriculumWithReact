@@ -15,7 +15,7 @@ const CoursesList = [
     alt:"udemyNodeJS",
     info:"Udemy 02/05/20",
     },
-    {title:"SQL Server - Administración de base de datos",
+    {title:"SQL Server",
     url:"../SQL Server Certificado Udemy.jpg",
     alt:"udemySQLServer",
     info:"Udemy 26/05/2021",

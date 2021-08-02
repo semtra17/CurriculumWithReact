@@ -212,3 +212,19 @@
     }
    
 }
+@media (max-width:355px){
+    .titleSkillsSoftware{
+        font-size: 1.2em;
+        
+    }
+    .infoSkillsSoftware div:nth-child(2) {
+        width: 150%;
+    }
+    .infoSkillsSoftware div:nth-child(2) p{
+        text-align: left;
+      width: 100%;
+     
+        font-size: 1.1em;
+    }
+   
+}

@@ -276,3 +276,17 @@
     }
 
 }
+@media (max-width: 355px){
+    .Works{
+        margin-top: 20%;
+    
+        
+        
+    }
+    .titleWorks h2{
+        margin: auto;
+        text-align:center;
+        
+        
+    }
+}

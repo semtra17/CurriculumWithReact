@@ -1,9 +1,8 @@
 .middle {
-    height: 6000px;
+    height: 5800px;
     width: 100%;
     background: rgb(147, 171, 248);
     /* background: linear-gradient(360deg, rgba(83,82,97,1) 0%, rgba(111,140,236,1) 35%, rgba(167,184,238,1) 100%); */
     font-family: 'Montserrat', sans-serif;
     color: white;
-
 }
