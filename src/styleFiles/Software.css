@@ -237,36 +237,10 @@
     }
     .titleSoftware{
         width: 120%;
-        margin-left: -45px;
-       
+        margin-left: -55px;
+        text-align: center;
         font-size: 1.4em;    
     }
-    /* .Software .iconsSoftware{
-        opacity: 0;
-    }
-    .Software.animation .iconsSoftware{
-        opacity: 1;
-        transition: 2s;
-    }
-    
-@keyframes animatedIcons1{
-    0%{
-       
-    }
-    100%{
-     
-    } 
-  
-}
-@keyframes animatedIcons2{
-    0%{
-     
-    }
-    100%{
-   
-    } 
-  
-} */
 
     .iconsSoftware ul li img{
         align-self: center;
@@ -287,8 +261,12 @@
    
 }
 @media (max-width:355px){
+    .titleSoftware{
+       
+        font-size: 1.1em;    
+    }
     .Software{
-        margin-top: 300px;
+        margin: 200px 0;
       
     }
 }

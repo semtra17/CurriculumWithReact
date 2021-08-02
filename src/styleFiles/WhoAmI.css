@@ -73,8 +73,8 @@
     transition:2000ms ;
     opacity: 0;
     margin-top: 110px;
-    width: 262px;
-    height: 262px;
+    width: 20%;
+    height: 30%;
 }
 
 
@@ -112,7 +112,6 @@
 }
 
 
-
 @media (max-width: 992px){
 
     .titleWhoAmI{
@@ -144,6 +143,9 @@
 }
 
 @media (max-width: 705px){
+    .WhoAmI{
+     margin-bottom: 400px;
+    }
     .titleWhoAmI{
         
           font-size: 1.6em;
@@ -168,7 +170,9 @@
     .WhoAmI{
         height: 20%;
     
+        margin-bottom: 200px;
     }
+    
     .titleWhoAmI{    
         font-size: 1.4em;
         align-items: center;
@@ -188,4 +192,18 @@
       display: none;
     }
 
+}
+
+
+
+@media (max-width:355px){
+    .titleWhoAmI{
+        font-size: 1.2em;
+        
+    }
+    .infoWhoAmI div:nth-child(1) p{
+      
+        font-size: 1.1em;
+    }
+   
 }

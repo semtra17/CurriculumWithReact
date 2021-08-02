@@ -1,11 +1,12 @@
 import React,{Link, Component} from 'react';
 import "../styleFiles/Contact.css"
 import ContactCard from './ElemContactCard';
-
-export default class Contact extends Component{
-
-    render(){
-        return <section className={this.props.Contact} id="Contact">
+import { useStore } from '../store/StoreProviders';
+export default function Contact(props){
+    const { components} = useStore();
+    const {className, enable } = components[8];
+    
+        return (<section className={enable ? className : "desactivated"} id="Contact">
             
                 <div className="titleContact">
                     <h2>Contacto</h2>
@@ -20,9 +21,9 @@ export default class Contact extends Component{
         
            
 
-        </section>
+        </section>)
 
-    }
+    
 
 
 }

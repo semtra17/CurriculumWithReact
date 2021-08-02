@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React from 'react';
+import {useStore} from '../store/StoreProviders'
 import '../styleFiles/Top.css';
 import Menu  from './Menu';
 
@@ -7,14 +7,10 @@ import Menu  from './Menu';
 
 
 
-export default class Top extends Component {
-
-
-  
-
-    render(){
-        return <div className="top">
-            <Menu sticky={this.props.sticky}/>
+export default function Top (props) {
+    const {components} = useStore();
+        return (<div className="top">
+            <Menu/>
            <div className="container-title">
             <div className="title" >
                     <span><p>MI NOMBRE ES</p></span>
@@ -27,14 +23,14 @@ export default class Top extends Component {
                 </div>
            </div>
            <div className="containerPicture">
-            <div className={this.props.myPicture}>
+            <div className={components[1].enable ? components[1].className : "desactivated"}>
                 <img src="./2020-12-01.png" alt="Profile"></img>
             </div>
            </div>
-           <div className={this.props.linesPicture}>
+           <div className={components[2].enable? components[2].className : "desactivated"}>
                <span></span>
                <span></span>
            </div>
-        </div>
-    }
+        </div>)
+    
 }

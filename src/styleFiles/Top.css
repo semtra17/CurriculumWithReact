@@ -388,3 +388,30 @@
 
   
 }
+
+@media (max-width: 355px){
+    
+
+    .title span:nth-child(1){
+   
+        font-size: 20px;
+   
+    }
+    .title span:nth-child(2){
+   
+        font-size: 25px;
+   
+    }
+    .title span:nth-child(2) p span{
+          
+        font-size: 25px;
+
+    
+    }
+
+    .title span:nth-child(4){
+     
+        font-size: 20px; 
+        
+    }
+}

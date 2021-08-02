@@ -1,10 +1,12 @@
 import React,{Component} from 'react';
 import "../styleFiles/Works.css"
+import { useStore } from '../store/StoreProviders';
 
 export default function Works(props){
-
+    const {components} = useStore();
+    const {className, enable} = components[7];
   
-        return (<section className={props.Works} id="Works">
+        return (<section className={enable ? className : "desactivated"} id="Works">
            
                 <div className="titleWorks">
                     <h2>Trabajos</h2>

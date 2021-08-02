@@ -269,3 +269,27 @@
     
 
 }
+
+
+@media (max-width:505px){
+    .titleCertifications{
+        font-size: 1.4em;
+        text-align: center;
+        margin-left: -55px;;
+    }
+    .subtitle p{
+        font-weight: bolder;
+        font-size: 1em;
+    }
+    .subInfo p{
+        font-size: 1em;
+    }
+   
+}
+@media (max-width:355px){
+    .titleCertifications{
+        font-size: 1.2em;
+        
+    }
+   
+}

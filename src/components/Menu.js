@@ -1,49 +1,53 @@
-import React, { Component } from 'react';
+import React, { useRef,useEffect} from 'react';
 import '../styleFiles/Menu.css';
+import { useStore,useDispatch } from '../store/StoreProviders';
+import { types } from "../store/StoreReducer";
 
 
-export default class Menu extends Component {
-    constructor(props){
-        super(props);
-   
-    }
-
+export default function Menu(props) {
     
+    const {components} = useStore();
+    const dispatch = useDispatch();
+    
+    
+    useEffect(() => {
+        
+    })
+    
+    const {className, enable} = components[0];
 
-
-    toggle = (componente) =>{
+    const toggle = (componente) =>{
         let header = document.getElementById('header');
         header.classList.toggle('active');
-        
         document.getElementById("menu").classList.add('sticky');
         if( document.getElementById(componente) != null){
             document.getElementById(componente).classList.add('animation');
         }
       }
     
-    render(){
-        return <header className="header" id="header">
+    
+        return (<header className="header" id="header">
             
-            <ul id="menu" className={this.props.sticky}>
+            <ul id="menu" className={enable ? className : "desactivated"}>
         <li>
-            <a onClick={() => this.toggle("WhoAmI")} href="/#WhoAmI">¿Quién soy?</a>
+            <a onClick={() => toggle('WhoAmI')} href="/#WhoAmI" >¿Quién soy?</a>
         </li>
         <li>
-            <a onClick={() => this.toggle("softwareSkills")} href="/#softwareSkills">Habilidades y Tecnologías</a>
+            <a onClick={() => toggle("softwareSkills")} href="/#softwareSkills">Habilidades y Tecnologías</a>
         </li>
         <li>
-            <a onClick={() => this.toggle("Certifications")} href="/#Certifications">Estudios y Certificaciones</a>
+            <a onClick={() => toggle("Certifications")} href="/#Certifications">Estudios y Certificaciones</a>
         </li>
         <li>
-            <a onClick={() => this.toggle("Works")} href="/#Works">Trabajos</a>
+            <a onClick={() => toggle("Works")} href="/#Works">Trabajos</a>
         </li>
         <li>
-            <a onClick={() => this.toggle("Contact")} href="/#Contact">Contacto</a>
+            <a onClick={() => toggle("Contact")} href="/#Contact">Contacto</a>
         </li>
     </ul>
-    <div className="toggle" onClick={this.toggle}></div>
-        </header>
+    <div className="toggle" onClick={toggle}></div>
+        </header>)
         
     
-    }
+    
 }

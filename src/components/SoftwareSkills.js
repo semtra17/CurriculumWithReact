@@ -1,12 +1,15 @@
 import React,{Component} from  'react';
-
-
+import { Utils } from '../DataBase/Utils';
+import { useStore } from '../store/StoreProviders';
 import '../styleFiles/SoftwareSkills.css'
 
 export default function SoftwareSkills(props) {
-   
-    return(
-         <section className={props.softwareSkills} id="softwareSkills">
+    
+   const{ softwareSkillsText} = Utils;
+   const { components} = useStore();
+   const { className, enable} = components[4]; 
+   return(
+         <section className={enable ? className : "desactivated"} id="softwareSkills">
                     
                         <div className="titleSkillsSoftware">
                             <h2>Habilidades y Tecnologías</h2>
@@ -16,7 +19,7 @@ export default function SoftwareSkills(props) {
                             <div><img alt="skills" src="../habilidades.png" ></img></div>
                             <div >
                                 <p>
-                                {props.softwareSkillsText}
+                                {softwareSkillsText}
                             
                                 </p>
                             </div>
