@@ -12,6 +12,7 @@ import { types } from "./store/StoreReducer";
 import {Utils} from './DataBase/Utils';
 
 
+
  const {profileText, softwareSkillsText} = Utils;
 
 function App(props) {
@@ -147,6 +148,7 @@ function App(props) {
     onClickCapture={outClick}
     onWheel={(e) => onWheelFunctions()}
     >
+ 
         <Top/>
         <Middle/>
         <Contact/>

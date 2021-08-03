@@ -2,7 +2,7 @@ import React, { useRef,useEffect} from 'react';
 import '../styleFiles/Menu.css';
 import { useStore,useDispatch } from '../store/StoreProviders';
 import { types } from "../store/StoreReducer";
-
+import ElemButton from './ElemButton';
 
 export default function Menu(props) {
     
@@ -36,7 +36,7 @@ export default function Menu(props) {
             <a onClick={() => toggle("softwareSkills")} href="/#softwareSkills">Habilidades y Tecnologías</a>
         </li>
         <li>
-            <a onClick={() => toggle("Certifications")} href="/#Certifications">Estudios y Certificaciones</a>
+            <a onClick={() => toggle("Certifications")} href="/#Certification">Estudios y Certificaciones</a>
         </li>
         <li>
             <a onClick={() => toggle("Works")} href="/#Works">Trabajos</a>
@@ -46,6 +46,7 @@ export default function Menu(props) {
         </li>
     </ul>
     <div className="toggle" onClick={toggle}></div>
+    <ElemButton/>
         </header>)
         
     
