@@ -7,7 +7,7 @@ function ElemButton(props) {
     return (
         <div className="top_button">
            <a href="/#Top"> 
-               <img src="flecha-hacia-arriba.png"></img>
+               <img alt="scrollTopButton" src="flecha-hacia-arriba.png"></img>
             </a>
         </div>
     )
