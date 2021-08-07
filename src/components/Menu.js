@@ -1,4 +1,4 @@
-import React, { useRef,useEffect} from 'react';
+import React from 'react';
 import '../styleFiles/Menu.css';
 import { useStore,useDispatch } from '../store/StoreProviders';
 import { types } from "../store/StoreReducer";
@@ -7,12 +7,8 @@ import { types } from "../store/StoreReducer";
 export default function Menu(props) {
     
     const {components} = useStore();
-    const dispatch = useDispatch();
+
     
-    
-    useEffect(() => {
-        
-    })
     
     const {className, enable} = components[0];
 

@@ -20,7 +20,7 @@ export default function Certifications(props){
     
 
     /* {certification_conteiner} */
-        return (<section className={enable ? className : "desactivated"} id="Certification">
+        return (<section className={enable ? className : "desactivated"} id="Certifications">
            
                 <div className="titleCertifications">
                     <h2>Estudios y Certificaciones</h2>
