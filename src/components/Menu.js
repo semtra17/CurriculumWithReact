@@ -36,7 +36,7 @@ export default function Menu(props) {
             <a onClick={() => toggle("softwareSkills")} href="/#softwareSkills">Habilidades y Tecnologías</a>
         </li>
         <li>
-            <a onClick={() => toggle("Certifications")} href="/#Certifications">Estudios y Certificaciones</a>
+            <a onClick={() => toggle("Certification")} href="/#Certifications">Estudios y Certificaciones</a>
         </li>
         <li>
             <a onClick={() => toggle("Works")} href="/#Works">Trabajos</a>
