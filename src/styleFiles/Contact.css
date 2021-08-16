@@ -10,7 +10,7 @@
 .titleContact{
 
 
-    font-size: 2em;
+    font-size: 2.1em;
     
 }
 .titleContact h2{
@@ -70,7 +70,7 @@
 {
     
     opacity: 0;
-    box-shadow: 5px 8px 6px 0px rgba(0, 0, 0, 0.521);
+    box-shadow: 5px 8px 10px 0px rgba(0, 0, 0, 0.521);
     border-radius: 25px;
     position: relative;
     width: 350px;
@@ -131,30 +131,29 @@
 
 
 
-.content
+.infoContact .box .content
 {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap: wrap ;
     background-color: white;
     padding: 25px;
 }
-.content h2
+.infoContact .box .content h2
 {
     color: rgb(22, 22, 22);
 
     transition: 0.5s;
     text-transform: uppercase;
     margin-bottom: 5px;
-    font-size: 1em;
+    font-size: 20px;
 }
 .infoContact .box .content p
 {
-   
+    
     color: rgba(0, 0, 0, 0.582);
-    font-size: 0.8em;
+    font-size: 15px;
     font-weight: 700;
 }
 

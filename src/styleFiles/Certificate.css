@@ -38,13 +38,13 @@
 
 @media (max-width: 1500px){
     .Certificate{
-        margin: -850px 12%;
+        margin: -850px -1%;
     }
 
 }
 @media (max-width: 1000px){
     .Certificate{
-        margin: -850px -5%;
+        margin: -850px 10%;
         width: 130%;
         height: 120%;
     }
