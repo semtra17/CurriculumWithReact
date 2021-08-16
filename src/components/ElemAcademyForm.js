@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 
-export default function AcademyFormElem(props){
-
+function AcademyFormElem(props){
     return(
         <li>
             <div className="subtitle"><p > {props.title}</p></div>
@@ -12,3 +11,4 @@ export default function AcademyFormElem(props){
     )
 }
 
+export default memo(AcademyFormElem)

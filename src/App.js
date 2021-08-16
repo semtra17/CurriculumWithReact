@@ -1,42 +1,43 @@
 import './App.css';
-import React, { Component, useEffect,useRef,useState } from 'react';
+import React, { useCallback, useEffect,useRef,useState } from 'react';
 import Top  from './components/Top';
 import Middle  from './components/Middle';
 import Bottom  from './components/Bottom';
 import Contact from './components/Contact';
-import StoreProvider,{ useDispatch, useStore }  from './store/StoreProviders';
+import { useDispatch }  from './store/StoreProviders';
 import { types } from "./store/StoreReducer";
 // componentes
 
 
-import {Utils} from './DataBase/Utils';
 
 
- const {profileText, softwareSkillsText} = Utils;
 
-function App(props) {
 
-  
-    const keyEscape = () =>{
+
+function App() {
+    const dispatch = useDispatch(); 
+
+    const keyEscape = useCallback( (e) => {
         let certificate = document.getElementById("certificado");
         document.addEventListener("keyup", (e =>{
             if(e.key === "Escape"){
                 certificate.className = "Certificate";
             }
         }))
-    }
-    const outClick = (e) =>{
+    },[])
+
+    const outClick = useCallback((e) =>{
         let certificado = document.getElementById("certificado");
         if(e.target.className !=  "Certificate active" && certificado.className === "Certificate active"){
             certificado.className = "Certificate";
             
         }
         
-    }
-    const dispatch = useDispatch();
+    },[])
+ 
     
   
-    const onWheelFunctions = e =>{
+    const onWheelFunctions = useCallback((e) =>{
             //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
             //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
             //============================= FUNCIONES RUEDA RATON WEB ESCRITORIO=================
@@ -113,9 +114,7 @@ function App(props) {
                     dispatch({type: types.ADD_ANIMATION_COMPONENT,payload:4});         
                 else
                     dispatch({type: types.REMOVE_ANIMATION_COMPONENT,payload:4});
-                             
-                console.log(document.documentElement.scrollHeight * 0.50)
-                console.log(window.scrollY);
+                
                 if(window.scrollY > document.documentElement.scrollHeight * 0.29)
                     dispatch({type: types.ADD_ANIMATION_COMPONENT,payload:5});   
                 else
@@ -138,13 +137,13 @@ function App(props) {
                     dispatch({type: types.REMOVE_ANIMATION_COMPONENT,payload:8});            
             }   
 
-        }
+        },[])
         
-
     return (<div 
-    onLoad={keyEscape, onWheelFunctions}
+    onLoad={ onWheelFunctions}
     onTouchMoveCapture={(e) => onWheelFunctions()}
     onClickCapture={outClick}
+    onKeyUpCapture={keyEscape}
     onWheel={(e) => onWheelFunctions()}
     >
         <Top/>

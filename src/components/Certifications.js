@@ -1,4 +1,4 @@
-import React,{useState,Component} from 'react';
+import React,{useState,Component, useCallback} from 'react';
 import "../styleFiles/Certifications.css"
 import Certificate from "./ElemCertificate"
 import Course from "./ElemCourse"
@@ -11,11 +11,11 @@ export default function Certifications(props){
     
     const {components} = useStore();
     const { className, enable} = components[6];
-    const showCertificate = (certificateName) => {
+    const showCertificate = useCallback((certificateName) => {
         let certificado = document.getElementById("certificado");
         certificado.className = "Certificate active";
         setImage(certificateName);
-    }
+    })
   
     
 

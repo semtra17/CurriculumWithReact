@@ -1,11 +1,11 @@
-import React from  'react';
-
-export default function SoftwareIcons (props){
-
+import React, { memo } from  'react';
+function SoftwareIcons ({altText,srcImg}){
 
     return(
         <li>
-        <img alt={props.altText} src={props.srcImg} ></img>
+        <img alt={altText} src={srcImg} ></img>
     </li>
     )
 }
+
+export default memo(SoftwareIcons);

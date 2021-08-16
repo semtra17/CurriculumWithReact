@@ -1,30 +1,30 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import '../styleFiles/Menu.css';
 import { useStore,useDispatch } from '../store/StoreProviders';
 import { types } from "../store/StoreReducer";
 
 
-export default function Menu(props) {
+export default function Menu() {
     
     const {components} = useStore();
-
     
     
     const {className, enable} = components[0];
 
-    const toggle = (componente) =>{
+    const toggle = useCallback((componente) =>{
         let header = document.getElementById('header');
         header.classList.toggle('active');
         document.getElementById("menu").classList.add('sticky');
         if( document.getElementById(componente) != null){
             document.getElementById(componente).classList.add('animation');
         }
-      }
+    },[])
+
     
     
         return (<header className="header" id="header">
             
-            <ul id="menu" className={enable ? className : "desactivated"}>
+    <ul id="menu" className={enable ? className : "desactivated"}>
         <li>
             <a onClick={() => toggle('WhoAmI')} href="/#WhoAmI" >¿Quién soy?</a>
         </li>
@@ -42,7 +42,7 @@ export default function Menu(props) {
         </li>
     </ul>
     <div className="toggle" onClick={toggle}></div>
-        </header>)
+    </header>)
         
     
     

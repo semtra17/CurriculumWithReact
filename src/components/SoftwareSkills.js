@@ -8,6 +8,7 @@ export default function SoftwareSkills(props) {
    const{ softwareSkillsText} = Utils;
    const { components} = useStore();
    const { className, enable} = components[4]; 
+   
    return(
          <section className={enable ? className : "desactivated"} id="softwareSkills">
                     
