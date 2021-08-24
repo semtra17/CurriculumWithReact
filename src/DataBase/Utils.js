@@ -1,7 +1,7 @@
  
  const Utils = {
      profileText:` Soy Luciano Aizar Assefh, tengo 24 años, soy programador, desarrollador web y actualmente estudiante de 3er año en la carrera Licenciatura en Sistemas en la Universidad Nacional de Lanús. 
-     Actualmente me enfoco en el desarrollo web y estoy comenzando a introducirme lentamente en la creación de aplicaciones móviles con React-Native. 
+     Actualmente trabajo en desarrollo web enfocado a PWA. 
      Mis lenguajes de preferencia son, en este momento, JavaScript y JAVA, tanto para desarrollo web como para el desarrollo de aplicaciones. 
      Complemento mi construcción frontend con software de diseño como Adobe Photoshop y Adobe XD. 
      Me considero una persona entusiasta, creativa, trabajadora y perseverante. Siempre intento estar actualizado y perfeccionar mis habilidades. 
